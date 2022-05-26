@@ -44,7 +44,7 @@ class TimerView extends StatelessWidget {
                 padding: EdgeInsets.symmetric(vertical: 100),
                 child: Center(child: TimerText()),
               ),
-              Actions(),
+              const Actions(),
             ],
           ),
         ],
