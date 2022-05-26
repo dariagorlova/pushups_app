@@ -1,0 +1,113 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:pushups_app/di/injection.dart';
+import 'package:pushups_app/features/training/cubit/training_cubit.dart';
+import 'package:pushups_app/features/training/cubit/training_state.dart';
+
+class TrainingScreen extends StatelessWidget {
+  const TrainingScreen({
+    required this.title,
+    required this.listPushups,
+    required this.timeRestInSec,
+    super.key,
+  });
+
+  final String title;
+  final List<int> listPushups;
+  final int timeRestInSec;
+
+  @override
+  Widget build(BuildContext context) {
+    return BlocProvider(
+      create: (context) => getIt<TrainingCubit>(
+        param1: TrainingCubitParam(
+          listPushups: listPushups,
+          timeRestInSec: timeRestInSec,
+        ),
+      ),
+      child: _TrainingView(title: title),
+    );
+  }
+}
+
+class _TrainingView extends StatelessWidget {
+  const _TrainingView({
+    required this.title,
+  });
+
+  final String title;
+
+  @override
+  Widget build(BuildContext context) {
+    return WillPopScope(
+      onWillPop: () async {
+        if (context.read<TrainingCubit>().state.isCancelled) {
+          return true;
+        }
+        await showAlertDialog(context);
+        return false;
+      },
+      child: Scaffold(
+        appBar: AppBar(
+          title: Text(title),
+        ),
+        body: Builder(
+          builder: (context) {
+            return InkWell(
+              onTap: () async {
+                await context.read<TrainingCubit>().pushup();
+              },
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  BlocSelector<TrainingCubit, TrainingState, int>(
+                    selector: (state) => state.curPushup,
+                    builder: (context, curPushup) {
+                      return curPushup > 0
+                          ? Text(
+                              curPushup.toString(),
+                              textAlign: TextAlign.center,
+                              style: Theme.of(context).textTheme.displayLarge,
+                            )
+                          : const Text('');
+                    },
+                  ),
+                  Text(
+                    'COME ON!',
+                    textAlign: TextAlign.center,
+                    style: Theme.of(context).textTheme.titleLarge,
+                  ),
+                ],
+              ),
+            );
+          },
+        ),
+      ),
+    );
+  }
+}
+
+Future<void> showAlertDialog(BuildContext context) {
+  final dialog = AlertDialog(
+    title: const Text('Want to quit?'),
+    content: const Text('Training is not finished. Do you want to go out?'),
+    actions: [
+      ElevatedButton(
+        child: const Text('Yes'),
+        onPressed: () {
+          Navigator.of(context).pop();
+          context.read<TrainingCubit>().goBack(result: false);
+        },
+      ),
+      ElevatedButton(
+        child: const Text('No'),
+        onPressed: () {
+          Navigator.of(context).pop();
+        },
+      ),
+    ],
+  );
+
+  return showDialog<void>(context: context, builder: (context) => dialog);
+}
