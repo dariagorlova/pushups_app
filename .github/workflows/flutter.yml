@@ -13,7 +13,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Setup Flutter
-        uses: subosito/flutter-action@2
+        uses: subosito/flutter-action@v2
         with:
           flutter-version: 3.0.1
           channel: stable
