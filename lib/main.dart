@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:get_it/get_it.dart';
 import 'package:injectable/injectable.dart';
 import 'package:pushups_app/di/injection.dart';
@@ -46,6 +47,15 @@ class _MyAppState extends State<MyApp> {
             ),
             routeInformationParser: getIt<AppRouter>().defaultRouteParser(),
             routerDelegate: getIt<AppRouter>().delegate(),
+            localizationsDelegates: const [
+              GlobalMaterialLocalizations.delegate,
+              GlobalWidgetsLocalizations.delegate,
+              GlobalCupertinoLocalizations.delegate,
+            ],
+            supportedLocales: const [
+              Locale('en', ''),
+              Locale('ua', ''),
+            ],
           );
         }
         return const SplashScreen();
