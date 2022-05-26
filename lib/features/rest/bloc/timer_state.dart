@@ -11,7 +11,6 @@ class TimerState with _$TimerState {
   }) = _CompleteTimerState;
 }
 
-
 // abstract class TimerState extends Equatable {
 //   final int duration;
 
