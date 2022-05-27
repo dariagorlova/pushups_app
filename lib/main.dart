@@ -43,6 +43,11 @@ class _MyAppState extends State<MyApp> {
               primarySwatch: Colors.orange,
               backgroundColor: Colors.orangeAccent.shade100,
               cardColor: Colors.white,
+              tabBarTheme: TabBarTheme(
+                labelColor: Theme.of(context).cardColor,
+                unselectedLabelColor: Colors.black,
+                labelStyle: Theme.of(context).textTheme.titleLarge,
+              ),
             ),
             routeInformationParser: getIt<AppRouter>().defaultRouteParser(),
             routerDelegate: getIt<AppRouter>().delegate(),
