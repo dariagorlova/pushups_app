@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter_test/flutter_test.dart';
 import 'package:pushups_app/di/injection.dart' as di;
 import 'package:pushups_app/main.dart';
@@ -9,6 +11,7 @@ Future<void> theAppIsRunning(WidgetTester tester) async {
   await di.getIt.reset();
   await tester.pumpWidget(
     MyApp(
+      locale: const Locale('en'),
       initialization: configureInjection(),
     ),
   );

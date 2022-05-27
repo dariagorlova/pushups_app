@@ -15,9 +15,11 @@ class MyApp extends StatefulWidget {
   const MyApp({
     super.key,
     this.initialization,
+    this.locale,
   });
 
   final Future<GetIt>? initialization;
+  final Locale? locale;
 
   @override
   State<MyApp> createState() => _MyAppState();
@@ -41,6 +43,7 @@ class _MyAppState extends State<MyApp> {
         if (snapshot.connectionState == ConnectionState.done) {
           return MaterialApp.router(
             title: '100 Pushups',
+            locale: widget.locale,
             theme: ThemeData(
               primarySwatch: Colors.orange,
               backgroundColor: Colors.orangeAccent.shade100,
