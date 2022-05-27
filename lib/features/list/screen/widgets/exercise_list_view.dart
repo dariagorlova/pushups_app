@@ -21,9 +21,8 @@ class ExercieListView extends StatelessWidget {
           title: const Text('💪 100 pushups 💪'),
           automaticallyImplyLeading: false,
           bottom: TabBar(
-            indicatorColor: Theme.of(context).cardColor,
-            indicatorWeight: 3,
-            labelStyle: Theme.of(context).textTheme.titleLarge,
+            indicatorColor: Theme.of(context).tabBarTheme.labelColor,
+            labelStyle: Theme.of(context).tabBarTheme.labelStyle,
             tabs: const [
               Tab(text: 'Normal'),
               Tab(text: 'Strong'),
