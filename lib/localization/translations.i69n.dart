@@ -50,7 +50,7 @@ class Translations implements i69n.I69nMessageBundle {
   String get quitBody => "Training is not finished. Do you want to go out?";
   String get yesButtonTitle => "Yes";
   String get noButtonTitle => "No";
-  String listTile1(int numWeek) => "Week $numWeek";
+  String listTile1(int numWeek) => "Week $numWeek, ";
   String listTile2(int numDay) => "Day $numDay";
   Object operator [](String key) {
     var index = key.indexOf('.');

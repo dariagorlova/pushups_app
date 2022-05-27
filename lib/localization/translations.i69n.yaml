@@ -13,6 +13,6 @@ quitTitle: Want to quit?
 quitBody: Training is not finished. Do you want to go out?
 yesButtonTitle: Yes
 noButtonTitle: No
-listTile1(int numWeek): "Week $numWeek"
+listTile1(int numWeek): "Week $numWeek, "
 listTile2(int numDay): "Day $numDay"
 

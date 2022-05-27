@@ -37,6 +37,9 @@ class ExercieListView extends StatelessWidget {
         body: ListView.builder(
           itemCount: state.allDays.length,
           itemBuilder: (ctx, i) {
+            final title = translations
+                    .listTile1(_getWeekFromDay(state.allDays[i].day)) +
+                translations.listTile2(_getDayFromDay(state.allDays[i].day));
             return Padding(
               padding: const EdgeInsets.all(5),
               child: ListTile(
@@ -47,8 +50,7 @@ class ExercieListView extends StatelessWidget {
                     ? Theme.of(context).primaryColor
                     : Theme.of(context).cardColor,
                 title: Text(
-                  '${translations.listTile1(_getWeekFromString(state.allDays[i].title))}${translations.listTile2(_getDayFromString(state.allDays[i].title))}',
-                  //state.allDays[i].title,
+                  title,
                   style: Theme.of(context).textTheme.titleLarge,
                 ),
                 subtitle: Text(
@@ -73,12 +75,16 @@ class ExercieListView extends StatelessWidget {
 String _listPushupsToString(List<int> list) =>
     list.map((i) => i.toString()).join('-');
 
-int _getDayFromString(String text) {
-  final list = RegExp(r'\d+').allMatches(text).map((e) => e.group(0));
-  return int.parse(list.last.toString());
-}
+// int _getDayFromString(String text) {
+//   final list = RegExp(r'\d+').allMatches(text).map((e) => e.group(0));
+//   return int.parse(list.last.toString());
+// }
 
-int _getWeekFromString(String text) {
-  final list = RegExp(r'\d+').allMatches(text).map((e) => e.group(0));
-  return int.parse(list.first.toString());
-}
+// int _getWeekFromString(String text) {
+//   final list = RegExp(r'\d+').allMatches(text).map((e) => e.group(0));
+//   return int.parse(list.first.toString());
+// }
+
+int _getDayFromDay(int day) => day % 3 + 1;
+
+int _getWeekFromDay(int day) => day ~/ 3 + 1;

@@ -18,7 +18,7 @@ class AppLocalizations {
       _ExampleLocalizationsDelegate();
 
   static final List<Locale> supportedLocales =
-      _supportedLocales.map((x) => Locale(x)).toList();
+      _supportedLocales.map(Locale.new).toList();
 
   static Future<AppLocalizations> load(Locale locale) =>
       Future.value(AppLocalizations(_translations[locale.languageCode]!()));

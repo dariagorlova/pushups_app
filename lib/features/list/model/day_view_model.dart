@@ -5,7 +5,7 @@ part 'day_view_model.freezed.dart';
 @freezed
 class DayViewModel with _$DayViewModel {
   const factory DayViewModel({
-    required String title,
+    required int day,
     required List<int> listPushups,
     required bool isCurrent,
     required int timeRest,

@@ -60,7 +60,7 @@ class DaysCubit extends Cubit<DaysState> {
       final day = allDays[curIndex];
       final result = await _router.push<bool>(
         TrainingRoute(
-          title: day.title,
+          day: day.day,
           listPushups: day.listPushups,
           timeRestInSec: day.timeRest,
         ),
@@ -88,7 +88,7 @@ class DaysCubit extends Cubit<DaysState> {
             isCurrent: d.dayNumber == currentDay.dayNumber &&
                 currentDay.typeTraining == newTrainingProgramType,
             listPushups: d.listPushups,
-            title: d.title,
+            day: d.dayNumber,
             timeRest: d.timeRestInSec,
           ),
         )

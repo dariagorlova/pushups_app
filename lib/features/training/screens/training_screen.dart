@@ -7,13 +7,13 @@ import 'package:pushups_app/localization/localization.dart';
 
 class TrainingScreen extends StatelessWidget {
   const TrainingScreen({
-    required this.title,
+    required this.day,
     required this.listPushups,
     required this.timeRestInSec,
     super.key,
   });
 
-  final String title;
+  final int day;
   final List<int> listPushups;
   final int timeRestInSec;
 
@@ -26,7 +26,7 @@ class TrainingScreen extends StatelessWidget {
           timeRestInSec: timeRestInSec,
         ),
       ),
-      child: _TrainingView(title: title),
+      child: _TrainingView(title: day.toString()),
     );
   }
 }
