@@ -23,9 +23,7 @@ class ExercieListView extends StatelessWidget {
           title: Text(translations.mainPageTitle),
           automaticallyImplyLeading: false,
           bottom: TabBar(
-            indicatorColor: Theme.of(context).cardColor,
             indicatorWeight: 3,
-            labelStyle: Theme.of(context).textTheme.titleMedium,
             tabs: [
               Tab(text: translations.tabNormal),
               Tab(text: translations.tabStrong),
