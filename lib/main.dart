@@ -4,6 +4,7 @@ import 'package:get_it/get_it.dart';
 import 'package:injectable/injectable.dart';
 import 'package:pushups_app/di/injection.dart';
 import 'package:pushups_app/features/splash/splash_screen.dart';
+import 'package:pushups_app/localization/localization.dart';
 import 'package:pushups_app/routes/app_router.dart';
 
 void main() {
@@ -48,14 +49,11 @@ class _MyAppState extends State<MyApp> {
             routeInformationParser: getIt<AppRouter>().defaultRouteParser(),
             routerDelegate: getIt<AppRouter>().delegate(),
             localizationsDelegates: const [
+              AppLocalizations.delegate,
               GlobalMaterialLocalizations.delegate,
               GlobalWidgetsLocalizations.delegate,
-              GlobalCupertinoLocalizations.delegate,
             ],
-            supportedLocales: const [
-              Locale('en', ''),
-              Locale('ua', ''),
-            ],
+            supportedLocales: AppLocalizations.supportedLocales,
           );
         }
         return const SplashScreen();

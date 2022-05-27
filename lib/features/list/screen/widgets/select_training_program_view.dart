@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:pushups_app/features/list/cubit/days_cubit.dart';
+import 'package:pushups_app/localization/localization.dart';
 
 class SelectTrainingProgramView extends StatelessWidget {
   const SelectTrainingProgramView({super.key});
@@ -13,7 +14,7 @@ class SelectTrainingProgramView extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              'How many pushups\ncan you do?',
+              AppLocalizations.of(context).startQuestion,
               style: Theme.of(context).textTheme.headline5,
               textAlign: TextAlign.center,
             ),
