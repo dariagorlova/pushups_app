@@ -1,0 +1,18 @@
+mainPageTitle: 100 Pushups
+tabNormal: Normal
+tabStrong: Strong
+tabExtreme: Extreme
+startQuestion: How many pushups\ncan you do?
+comeOn: COME ON!
+timeToRest: Time to rest!
+continueIn: Let's continue in
+enoughButtonText: Enough rest
+congratulation: Congratulation!
+greatJob: Great job! Keep it up!
+quitTitle: Want to quit?
+quitBody: Training is not finished. Do you want to go out?
+yesButtonTitle: Yes
+noButtonTitle: No
+listTile1(int numWeek): "Week $numWeek"
+listTile2(int numDay): "Day $numDay"
+

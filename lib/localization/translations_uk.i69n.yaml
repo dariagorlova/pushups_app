@@ -1,0 +1,17 @@
+mainPageTitle: 100 віджимань
+tabNormal: Звичайний
+tabStrong: Просунутий
+tabExtreme: Важкий
+startQuestion: Скільки віджимань\nти можеш зробити?
+comeOn: Давай-давай!
+timeToRest: Час відпочити!
+continueIn: Продовжемо через
+enoughButtonText: Та давай вже
+congratulation: Вітаю!
+greatJob: Чудова робота! Так тримати!
+quitTitle: Вийти?
+quitBody: Тренування не завершенно. Бажаєш вийти?
+yesButtonTitle: Так
+noButtonTitle: Ні
+listTile1(int numWeek): "Тиждень $numWeek, "
+listTile2(int numDay): "День $numDay"
