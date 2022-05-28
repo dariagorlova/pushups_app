@@ -52,7 +52,7 @@ class Translations implements i69n.I69nMessageBundle {
   String get noButtonTitle => "No";
   String exerciseTitle(int day) => "Week ${day ~/ 3 + 1}, Day ${day % 3 + 1}";
   String get description =>
-      "100 Pushups is the program to train your body to go from 1 pushup to 100 consecutive reps in less than two months.\nAfter starting the program and selecting the current training day (it is highlighted), you must put your device on the floor near your nose and when you do one push-up, touch the screen with your nose. The number on the screen will decrease. When the whole approach is completed, you will have a certain time to rest.\nThe workouts are tailored to your starting level. You can change the training program by simply switching to the appropriate tab.\nLet's find out your starting level!";
+      "100 Pushups is the program to train your body to go from 1 pushup to 100 consecutive reps in less than two months.\n\nAfter starting the program and selecting the current training day (it is highlighted), you must put your device on the floor near your nose and when you do one push-up, touch the screen with your nose. The number on the screen will decrease. When the whole approach is completed, you will have a certain time to rest.\n\nThe workouts are tailored to your starting level. You can change the training program by simply switching to the appropriate tab.\nLet's find out your starting level!";
   Object operator [](String key) {
     var index = key.indexOf('.');
     if (index > 0) {
