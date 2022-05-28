@@ -53,8 +53,6 @@ class Translations_uk extends Translations {
   String get noButtonTitle => "Ні";
   String exerciseTitle(int day) =>
       "Тиждень ${day ~/ 3 + 1}, День ${day % 3 + 1}";
-  String listTile1(int numWeek) => "Тиждень $numWeek, ";
-  String listTile2(int numDay) => "День $numDay";
   String get description =>
       "100 віджимань це програма, що дозволяє тренувати тіло, щоб перейти від 1 віджимання до 100 повторень поспіль менш ніж за два місяці.\nЗапустивши програму і вибравши поточний день тренування (він виділений), Ви повинні покласти Ваш пристрій на підлогу в районі носа і, коли зробите один віджимання, торкнуться екрана носом. Цифра на екрані зменшиться. Коли весь підхід буде виконано, у Вас буде певний час для відпочинку.\nТренування складені з урахуванням Вашого початкового рівня. Ви зможете змінити програму тренування, просто переключившись на відповідну вкладку.\nДавайте дізнаємось Ваш початковий рівень!";
   Object operator [](String key) {
@@ -96,10 +94,6 @@ class Translations_uk extends Translations {
         return noButtonTitle;
       case 'exerciseTitle':
         return exerciseTitle;
-      case 'listTile1':
-        return listTile1;
-      case 'listTile2':
-        return listTile2;
       case 'description':
         return description;
       default:

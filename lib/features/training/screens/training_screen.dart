@@ -26,7 +26,7 @@ class TrainingScreen extends StatelessWidget {
           timeRestInSec: timeRestInSec,
         ),
       ),
-      child: _TrainingView(title: day.toString()),
+      child: _TrainingView(title: day),
     );
   }
 }
@@ -36,7 +36,7 @@ class _TrainingView extends StatelessWidget {
     required this.title,
   });
 
-  final String title;
+  final int title;
 
   @override
   Widget build(BuildContext context) {
@@ -50,7 +50,9 @@ class _TrainingView extends StatelessWidget {
       },
       child: Scaffold(
         appBar: AppBar(
-          title: Text(title),
+          title: Text(
+            AppLocalizations.of(context).exerciseTitle(title),
+          ),
         ),
         body: Builder(
           builder: (context) {
