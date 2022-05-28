@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pushups_app/localization/localization.dart';
 
 class CongratulationScreen extends StatelessWidget {
   const CongratulationScreen({
@@ -14,14 +15,14 @@ class CongratulationScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              'Congratulation!',
+              AppLocalizations.of(context).congratulation,
               style: Theme.of(context).textTheme.headline3,
             ),
             const SizedBox(
               height: 60,
             ),
             Text(
-              'Great job! Keep it up!',
+              AppLocalizations.of(context).greatJob,
               style: Theme.of(context).textTheme.headline5,
             ),
           ],

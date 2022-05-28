@@ -6,7 +6,6 @@ part 'one_day_data.freezed.dart';
 class OneDayData with _$OneDayData {
   const factory OneDayData({
     required int dayNumber,
-    required String title,
     required List<int> listPushups,
     required int timeRestInSec,
   }) = _OneDayData;

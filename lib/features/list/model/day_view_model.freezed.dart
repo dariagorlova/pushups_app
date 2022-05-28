@@ -16,7 +16,7 @@ final _privateConstructorUsedError = UnsupportedError(
 
 /// @nodoc
 mixin _$DayViewModel {
-  String get title => throw _privateConstructorUsedError;
+  int get day => throw _privateConstructorUsedError;
   List<int> get listPushups => throw _privateConstructorUsedError;
   bool get isCurrent => throw _privateConstructorUsedError;
   int get timeRest => throw _privateConstructorUsedError;
@@ -31,8 +31,7 @@ abstract class $DayViewModelCopyWith<$Res> {
   factory $DayViewModelCopyWith(
           DayViewModel value, $Res Function(DayViewModel) then) =
       _$DayViewModelCopyWithImpl<$Res>;
-  $Res call(
-      {String title, List<int> listPushups, bool isCurrent, int timeRest});
+  $Res call({int day, List<int> listPushups, bool isCurrent, int timeRest});
 }
 
 /// @nodoc
@@ -45,16 +44,16 @@ class _$DayViewModelCopyWithImpl<$Res> implements $DayViewModelCopyWith<$Res> {
 
   @override
   $Res call({
-    Object? title = freezed,
+    Object? day = freezed,
     Object? listPushups = freezed,
     Object? isCurrent = freezed,
     Object? timeRest = freezed,
   }) {
     return _then(_value.copyWith(
-      title: title == freezed
-          ? _value.title
-          : title // ignore: cast_nullable_to_non_nullable
-              as String,
+      day: day == freezed
+          ? _value.day
+          : day // ignore: cast_nullable_to_non_nullable
+              as int,
       listPushups: listPushups == freezed
           ? _value.listPushups
           : listPushups // ignore: cast_nullable_to_non_nullable
@@ -78,8 +77,7 @@ abstract class _$$_DayViewModelCopyWith<$Res>
           _$_DayViewModel value, $Res Function(_$_DayViewModel) then) =
       __$$_DayViewModelCopyWithImpl<$Res>;
   @override
-  $Res call(
-      {String title, List<int> listPushups, bool isCurrent, int timeRest});
+  $Res call({int day, List<int> listPushups, bool isCurrent, int timeRest});
 }
 
 /// @nodoc
@@ -95,16 +93,16 @@ class __$$_DayViewModelCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? title = freezed,
+    Object? day = freezed,
     Object? listPushups = freezed,
     Object? isCurrent = freezed,
     Object? timeRest = freezed,
   }) {
     return _then(_$_DayViewModel(
-      title: title == freezed
-          ? _value.title
-          : title // ignore: cast_nullable_to_non_nullable
-              as String,
+      day: day == freezed
+          ? _value.day
+          : day // ignore: cast_nullable_to_non_nullable
+              as int,
       listPushups: listPushups == freezed
           ? _value._listPushups
           : listPushups // ignore: cast_nullable_to_non_nullable
@@ -125,14 +123,14 @@ class __$$_DayViewModelCopyWithImpl<$Res>
 
 class _$_DayViewModel implements _DayViewModel {
   const _$_DayViewModel(
-      {required this.title,
+      {required this.day,
       required final List<int> listPushups,
       required this.isCurrent,
       required this.timeRest})
       : _listPushups = listPushups;
 
   @override
-  final String title;
+  final int day;
   final List<int> _listPushups;
   @override
   List<int> get listPushups {
@@ -147,7 +145,7 @@ class _$_DayViewModel implements _DayViewModel {
 
   @override
   String toString() {
-    return 'DayViewModel(title: $title, listPushups: $listPushups, isCurrent: $isCurrent, timeRest: $timeRest)';
+    return 'DayViewModel(day: $day, listPushups: $listPushups, isCurrent: $isCurrent, timeRest: $timeRest)';
   }
 
   @override
@@ -155,7 +153,7 @@ class _$_DayViewModel implements _DayViewModel {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_DayViewModel &&
-            const DeepCollectionEquality().equals(other.title, title) &&
+            const DeepCollectionEquality().equals(other.day, day) &&
             const DeepCollectionEquality()
                 .equals(other._listPushups, _listPushups) &&
             const DeepCollectionEquality().equals(other.isCurrent, isCurrent) &&
@@ -165,7 +163,7 @@ class _$_DayViewModel implements _DayViewModel {
   @override
   int get hashCode => Object.hash(
       runtimeType,
-      const DeepCollectionEquality().hash(title),
+      const DeepCollectionEquality().hash(day),
       const DeepCollectionEquality().hash(_listPushups),
       const DeepCollectionEquality().hash(isCurrent),
       const DeepCollectionEquality().hash(timeRest));
@@ -178,13 +176,13 @@ class _$_DayViewModel implements _DayViewModel {
 
 abstract class _DayViewModel implements DayViewModel {
   const factory _DayViewModel(
-      {required final String title,
+      {required final int day,
       required final List<int> listPushups,
       required final bool isCurrent,
       required final int timeRest}) = _$_DayViewModel;
 
   @override
-  String get title => throw _privateConstructorUsedError;
+  int get day => throw _privateConstructorUsedError;
   @override
   List<int> get listPushups => throw _privateConstructorUsedError;
   @override

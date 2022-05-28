@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:get_it/get_it.dart';
 import 'package:injectable/injectable.dart';
 import 'package:pushups_app/di/injection.dart';
 import 'package:pushups_app/features/splash/splash_screen.dart';
+import 'package:pushups_app/localization/localization.dart';
 import 'package:pushups_app/routes/app_router.dart';
 
 void main() {
@@ -13,9 +15,11 @@ class MyApp extends StatefulWidget {
   const MyApp({
     super.key,
     this.initialization,
+    this.locale,
   });
 
   final Future<GetIt>? initialization;
+  final Locale? locale;
 
   @override
   State<MyApp> createState() => _MyAppState();
@@ -39,6 +43,7 @@ class _MyAppState extends State<MyApp> {
         if (snapshot.connectionState == ConnectionState.done) {
           return MaterialApp.router(
             title: '100 Pushups',
+            locale: widget.locale,
             theme: ThemeData(
               primarySwatch: Colors.orange,
               backgroundColor: Colors.orangeAccent.shade100,
@@ -51,6 +56,12 @@ class _MyAppState extends State<MyApp> {
             ),
             routeInformationParser: getIt<AppRouter>().defaultRouteParser(),
             routerDelegate: getIt<AppRouter>().delegate(),
+            localizationsDelegates: const [
+              AppLocalizations.delegate,
+              GlobalMaterialLocalizations.delegate,
+              GlobalWidgetsLocalizations.delegate,
+            ],
+            supportedLocales: AppLocalizations.supportedLocales,
           );
         }
         return const SplashScreen();

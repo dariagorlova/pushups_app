@@ -26,7 +26,7 @@ class _$AppRouter extends RootStackRouter {
       return MaterialPageX<bool>(
           routeData: routeData,
           child: TrainingScreen(
-              title: args.title,
+              day: args.day,
               listPushups: args.listPushups,
               timeRestInSec: args.timeRestInSec,
               key: args.key));
@@ -64,14 +64,14 @@ class ListDaysRoute extends PageRouteInfo<void> {
 /// [TrainingScreen]
 class TrainingRoute extends PageRouteInfo<TrainingRouteArgs> {
   TrainingRoute(
-      {required String title,
+      {required int day,
       required List<int> listPushups,
       required int timeRestInSec,
       Key? key})
       : super(TrainingRoute.name,
             path: '/training-screen',
             args: TrainingRouteArgs(
-                title: title,
+                day: day,
                 listPushups: listPushups,
                 timeRestInSec: timeRestInSec,
                 key: key));
@@ -81,12 +81,12 @@ class TrainingRoute extends PageRouteInfo<TrainingRouteArgs> {
 
 class TrainingRouteArgs {
   const TrainingRouteArgs(
-      {required this.title,
+      {required this.day,
       required this.listPushups,
       required this.timeRestInSec,
       this.key});
 
-  final String title;
+  final int day;
 
   final List<int> listPushups;
 
@@ -96,7 +96,7 @@ class TrainingRouteArgs {
 
   @override
   String toString() {
-    return 'TrainingRouteArgs{title: $title, listPushups: $listPushups, timeRestInSec: $timeRestInSec, key: $key}';
+    return 'TrainingRouteArgs{day: $day, listPushups: $listPushups, timeRestInSec: $timeRestInSec, key: $key}';
   }
 }
 

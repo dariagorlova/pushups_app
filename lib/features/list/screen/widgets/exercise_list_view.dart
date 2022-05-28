@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:pushups_app/features/list/cubit/days_cubit.dart';
 import 'package:pushups_app/features/list/cubit/days_state.dart';
+import 'package:pushups_app/localization/localization.dart';
 
 class ExercieListView extends StatelessWidget {
   const ExercieListView({
@@ -13,20 +14,20 @@ class ExercieListView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final translations = AppLocalizations.of(context);
     return DefaultTabController(
       length: 3,
       child: Scaffold(
         backgroundColor: Theme.of(context).backgroundColor,
         appBar: AppBar(
-          title: const Text('💪 100 pushups 💪'),
+          title: Text(translations.mainPageTitle),
           automaticallyImplyLeading: false,
           bottom: TabBar(
-            indicatorColor: Theme.of(context).tabBarTheme.labelColor,
-            labelStyle: Theme.of(context).tabBarTheme.labelStyle,
-            tabs: const [
-              Tab(text: 'Normal'),
-              Tab(text: 'Strong'),
-              Tab(text: 'Extreme'),
+            indicatorWeight: 3,
+            tabs: [
+              Tab(text: translations.tabNormal),
+              Tab(text: translations.tabStrong),
+              Tab(text: translations.tabExtreme),
             ],
             onTap: (tabIndex) {
               context.read<DaysCubit>().getDays(tabIndex);
@@ -46,7 +47,7 @@ class ExercieListView extends StatelessWidget {
                     ? Theme.of(context).primaryColor
                     : Theme.of(context).cardColor,
                 title: Text(
-                  state.allDays[i].title,
+                  translations.exerciseTitle(state.allDays[i].day),
                   style: Theme.of(context).textTheme.titleLarge,
                 ),
                 subtitle: Text(

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:pushups_app/di/injection.dart';
 import 'package:pushups_app/features/rest/bloc/timer_bloc.dart';
+import 'package:pushups_app/localization/localization.dart';
 
 class RestScreen extends StatelessWidget {
   const RestScreen({
@@ -33,11 +34,11 @@ class TimerView extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Text(
-                'Time to rest!',
+                AppLocalizations.of(context).timeToRest,
                 style: Theme.of(context).textTheme.headline3,
               ),
               Text(
-                "Let's continue in",
+                AppLocalizations.of(context).continueIn,
                 style: Theme.of(context).textTheme.headline4,
               ),
               const Padding(
@@ -82,7 +83,7 @@ class Actions extends StatelessWidget {
                   const TimerEvent.goBack(),
                 ),
             child: Text(
-              'Enough rest',
+              AppLocalizations.of(context).enoughButtonText,
               style: Theme.of(context).textTheme.bodyLarge,
             ),
           ),

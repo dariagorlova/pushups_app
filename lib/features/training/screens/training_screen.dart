@@ -3,16 +3,17 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:pushups_app/di/injection.dart';
 import 'package:pushups_app/features/training/cubit/training_cubit.dart';
 import 'package:pushups_app/features/training/cubit/training_state.dart';
+import 'package:pushups_app/localization/localization.dart';
 
 class TrainingScreen extends StatelessWidget {
   const TrainingScreen({
-    required this.title,
+    required this.day,
     required this.listPushups,
     required this.timeRestInSec,
     super.key,
   });
 
-  final String title;
+  final int day;
   final List<int> listPushups;
   final int timeRestInSec;
 
@@ -25,7 +26,7 @@ class TrainingScreen extends StatelessWidget {
           timeRestInSec: timeRestInSec,
         ),
       ),
-      child: _TrainingView(title: title),
+      child: _TrainingView(title: day),
     );
   }
 }
@@ -35,7 +36,7 @@ class _TrainingView extends StatelessWidget {
     required this.title,
   });
 
-  final String title;
+  final int title;
 
   @override
   Widget build(BuildContext context) {
@@ -49,7 +50,9 @@ class _TrainingView extends StatelessWidget {
       },
       child: Scaffold(
         appBar: AppBar(
-          title: Text(title),
+          title: Text(
+            AppLocalizations.of(context).exerciseTitle(title),
+          ),
         ),
         body: Builder(
           builder: (context) {
@@ -74,7 +77,7 @@ class _TrainingView extends StatelessWidget {
                     },
                   ),
                   Text(
-                    'COME ON!',
+                    AppLocalizations.of(context).comeOn,
                     textAlign: TextAlign.center,
                     style: Theme.of(context).textTheme.titleLarge,
                   ),
@@ -89,19 +92,20 @@ class _TrainingView extends StatelessWidget {
 }
 
 Future<void> showAlertDialog(BuildContext context) {
+  final t = AppLocalizations.of(context);
   final dialog = AlertDialog(
-    title: const Text('Want to quit?'),
-    content: const Text('Training is not finished. Do you want to go out?'),
+    title: Text(t.quitTitle),
+    content: Text(t.quitBody),
     actions: [
       ElevatedButton(
-        child: const Text('Yes'),
+        child: Text(t.yesButtonTitle),
         onPressed: () {
           Navigator.of(context).pop();
           context.read<TrainingCubit>().goBack(result: false);
         },
       ),
       ElevatedButton(
-        child: const Text('No'),
+        child: Text(t.noButtonTitle),
         onPressed: () {
           Navigator.of(context).pop();
         },

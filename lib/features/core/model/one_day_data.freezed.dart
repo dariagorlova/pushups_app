@@ -17,7 +17,6 @@ final _privateConstructorUsedError = UnsupportedError(
 /// @nodoc
 mixin _$OneDayData {
   int get dayNumber => throw _privateConstructorUsedError;
-  String get title => throw _privateConstructorUsedError;
   List<int> get listPushups => throw _privateConstructorUsedError;
   int get timeRestInSec => throw _privateConstructorUsedError;
 
@@ -31,8 +30,7 @@ abstract class $OneDayDataCopyWith<$Res> {
   factory $OneDayDataCopyWith(
           OneDayData value, $Res Function(OneDayData) then) =
       _$OneDayDataCopyWithImpl<$Res>;
-  $Res call(
-      {int dayNumber, String title, List<int> listPushups, int timeRestInSec});
+  $Res call({int dayNumber, List<int> listPushups, int timeRestInSec});
 }
 
 /// @nodoc
@@ -46,7 +44,6 @@ class _$OneDayDataCopyWithImpl<$Res> implements $OneDayDataCopyWith<$Res> {
   @override
   $Res call({
     Object? dayNumber = freezed,
-    Object? title = freezed,
     Object? listPushups = freezed,
     Object? timeRestInSec = freezed,
   }) {
@@ -55,10 +52,6 @@ class _$OneDayDataCopyWithImpl<$Res> implements $OneDayDataCopyWith<$Res> {
           ? _value.dayNumber
           : dayNumber // ignore: cast_nullable_to_non_nullable
               as int,
-      title: title == freezed
-          ? _value.title
-          : title // ignore: cast_nullable_to_non_nullable
-              as String,
       listPushups: listPushups == freezed
           ? _value.listPushups
           : listPushups // ignore: cast_nullable_to_non_nullable
@@ -78,8 +71,7 @@ abstract class _$$_OneDayDataCopyWith<$Res>
           _$_OneDayData value, $Res Function(_$_OneDayData) then) =
       __$$_OneDayDataCopyWithImpl<$Res>;
   @override
-  $Res call(
-      {int dayNumber, String title, List<int> listPushups, int timeRestInSec});
+  $Res call({int dayNumber, List<int> listPushups, int timeRestInSec});
 }
 
 /// @nodoc
@@ -95,7 +87,6 @@ class __$$_OneDayDataCopyWithImpl<$Res> extends _$OneDayDataCopyWithImpl<$Res>
   @override
   $Res call({
     Object? dayNumber = freezed,
-    Object? title = freezed,
     Object? listPushups = freezed,
     Object? timeRestInSec = freezed,
   }) {
@@ -104,10 +95,6 @@ class __$$_OneDayDataCopyWithImpl<$Res> extends _$OneDayDataCopyWithImpl<$Res>
           ? _value.dayNumber
           : dayNumber // ignore: cast_nullable_to_non_nullable
               as int,
-      title: title == freezed
-          ? _value.title
-          : title // ignore: cast_nullable_to_non_nullable
-              as String,
       listPushups: listPushups == freezed
           ? _value._listPushups
           : listPushups // ignore: cast_nullable_to_non_nullable
@@ -125,15 +112,12 @@ class __$$_OneDayDataCopyWithImpl<$Res> extends _$OneDayDataCopyWithImpl<$Res>
 class _$_OneDayData implements _OneDayData {
   const _$_OneDayData(
       {required this.dayNumber,
-      required this.title,
       required final List<int> listPushups,
       required this.timeRestInSec})
       : _listPushups = listPushups;
 
   @override
   final int dayNumber;
-  @override
-  final String title;
   final List<int> _listPushups;
   @override
   List<int> get listPushups {
@@ -146,7 +130,7 @@ class _$_OneDayData implements _OneDayData {
 
   @override
   String toString() {
-    return 'OneDayData(dayNumber: $dayNumber, title: $title, listPushups: $listPushups, timeRestInSec: $timeRestInSec)';
+    return 'OneDayData(dayNumber: $dayNumber, listPushups: $listPushups, timeRestInSec: $timeRestInSec)';
   }
 
   @override
@@ -155,7 +139,6 @@ class _$_OneDayData implements _OneDayData {
         (other.runtimeType == runtimeType &&
             other is _$_OneDayData &&
             const DeepCollectionEquality().equals(other.dayNumber, dayNumber) &&
-            const DeepCollectionEquality().equals(other.title, title) &&
             const DeepCollectionEquality()
                 .equals(other._listPushups, _listPushups) &&
             const DeepCollectionEquality()
@@ -166,7 +149,6 @@ class _$_OneDayData implements _OneDayData {
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(dayNumber),
-      const DeepCollectionEquality().hash(title),
       const DeepCollectionEquality().hash(_listPushups),
       const DeepCollectionEquality().hash(timeRestInSec));
 
@@ -179,14 +161,11 @@ class _$_OneDayData implements _OneDayData {
 abstract class _OneDayData implements OneDayData {
   const factory _OneDayData(
       {required final int dayNumber,
-      required final String title,
       required final List<int> listPushups,
       required final int timeRestInSec}) = _$_OneDayData;
 
   @override
   int get dayNumber => throw _privateConstructorUsedError;
-  @override
-  String get title => throw _privateConstructorUsedError;
   @override
   List<int> get listPushups => throw _privateConstructorUsedError;
   @override
