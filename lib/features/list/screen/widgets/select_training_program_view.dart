@@ -14,7 +14,6 @@ class SelectTrainingProgramView extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(AppLocalizations.of(context).description),
-            // picture
             Image.asset('assets/images/pushups.jpeg'),
             Text(
               AppLocalizations.of(context).startQuestion,
@@ -24,7 +23,6 @@ class SelectTrainingProgramView extends StatelessWidget {
             const SizedBox(
               height: 40,
             ),
-
             Row(
               children: [
                 SizedBox(
