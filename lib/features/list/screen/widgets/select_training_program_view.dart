@@ -13,6 +13,9 @@ class SelectTrainingProgramView extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            Text(AppLocalizations.of(context).description),
+            // picture
+            Image.asset('assets/images/pushups.jpeg'),
             Text(
               AppLocalizations.of(context).startQuestion,
               style: Theme.of(context).textTheme.headline5,
@@ -21,41 +24,46 @@ class SelectTrainingProgramView extends StatelessWidget {
             const SizedBox(
               height: 40,
             ),
-            SizedBox(
-              width: 100,
-              child: ElevatedButton(
-                onPressed: () async {
-                  await context.read<DaysCubit>().setTrainingProgram(0, 0);
-                },
-                child: Text(
-                  '0-5',
-                  style: Theme.of(context).textTheme.headline6,
+
+            Row(
+              children: [
+                SizedBox(
+                  width: 100,
+                  child: ElevatedButton(
+                    onPressed: () async {
+                      await context.read<DaysCubit>().setTrainingProgram(0, 0);
+                    },
+                    child: Text(
+                      '0-5',
+                      style: Theme.of(context).textTheme.headline6,
+                    ),
+                  ),
                 ),
-              ),
-            ),
-            SizedBox(
-              width: 100,
-              child: ElevatedButton(
-                onPressed: () async {
-                  await context.read<DaysCubit>().setTrainingProgram(0, 1);
-                },
-                child: Text(
-                  '6-14',
-                  style: Theme.of(context).textTheme.headline6,
+                SizedBox(
+                  width: 100,
+                  child: ElevatedButton(
+                    onPressed: () async {
+                      await context.read<DaysCubit>().setTrainingProgram(0, 1);
+                    },
+                    child: Text(
+                      '6-14',
+                      style: Theme.of(context).textTheme.headline6,
+                    ),
+                  ),
                 ),
-              ),
-            ),
-            SizedBox(
-              width: 100,
-              child: ElevatedButton(
-                onPressed: () async {
-                  await context.read<DaysCubit>().setTrainingProgram(0, 2);
-                },
-                child: Text(
-                  '15-29',
-                  style: Theme.of(context).textTheme.headline6,
+                SizedBox(
+                  width: 100,
+                  child: ElevatedButton(
+                    onPressed: () async {
+                      await context.read<DaysCubit>().setTrainingProgram(0, 2);
+                    },
+                    child: Text(
+                      '15-29',
+                      style: Theme.of(context).textTheme.headline6,
+                    ),
+                  ),
                 ),
-              ),
+              ],
             ),
           ],
         ),
