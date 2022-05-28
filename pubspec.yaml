@@ -37,7 +37,7 @@ dev_dependencies:
   very_good_analysis: ^3.0.0
 
 flutter:
-
+  uses-material-design: true
   assets:
    - assets/images/pushups.jpeg
 
