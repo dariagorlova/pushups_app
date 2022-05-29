@@ -10,7 +10,7 @@ After starting the program and selecting the current training day (it is highlig
 
 Training List Screen       |  Rest Screen
 :-------------------------:|:-------------------------:
-![](./assets/images/training_screen.png)  |  ![](./assets/images/rest_screen.png)
+![](./doc/training_screen.png)  | ![](./doc/rest_screen.png)
 
 The program supports localization (English, Ukrainian)
 
