@@ -48,7 +48,7 @@ class DaysCubit extends Cubit<DaysState> {
     emit(
       DaysState.loaded(
         allDays: data,
-        selectedTypeOfTraining: currentDay.typeTraining,
+        selectedTypeOfTraining: newTrainingProgramType,
         currentDay: currentDay,
       ),
     );

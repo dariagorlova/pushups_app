@@ -28,27 +28,26 @@ class TimerView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
-      body: Stack(
-        children: [
-          Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              Text(
-                AppLocalizations.of(context).timeToRest,
-                style: Theme.of(context).textTheme.headline3,
-              ),
-              Text(
-                AppLocalizations.of(context).continueIn,
-                style: Theme.of(context).textTheme.headline4,
-              ),
-              const Padding(
-                padding: EdgeInsets.symmetric(vertical: 100),
-                child: Center(child: TimerText()),
-              ),
-              const Actions(),
-            ],
-          ),
-        ],
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: <Widget>[
+            Column(
+              children: [
+                Text(
+                  AppLocalizations.of(context).timeToRest,
+                  style: Theme.of(context).textTheme.headline3,
+                ),
+                Text(
+                  AppLocalizations.of(context).continueIn,
+                  style: Theme.of(context).textTheme.headline4,
+                ),
+              ],
+            ),
+            const TimerText(),
+            const Actions(),
+          ],
+        ),
       ),
     );
   }
