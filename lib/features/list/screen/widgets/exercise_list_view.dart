@@ -16,6 +16,7 @@ class ExercieListView extends StatelessWidget {
   Widget build(BuildContext context) {
     final translations = AppLocalizations.of(context);
     return DefaultTabController(
+      initialIndex: state.selectedTypeOfTraining,
       length: 3,
       child: Scaffold(
         backgroundColor: Theme.of(context).backgroundColor,
