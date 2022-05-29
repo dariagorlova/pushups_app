@@ -44,6 +44,7 @@ class _MyAppState extends State<MyApp> {
           return MaterialApp.router(
             title: '100 Pushups',
             locale: widget.locale,
+            debugShowCheckedModeBanner: false,
             theme: ThemeData(
               primarySwatch: Colors.orange,
               backgroundColor: Colors.orangeAccent.shade100,
