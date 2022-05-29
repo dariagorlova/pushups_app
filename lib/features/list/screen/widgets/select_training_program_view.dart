@@ -9,32 +9,36 @@ class SelectTrainingProgramView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Padding(
-              padding: const EdgeInsets.all(8),
-              child: Text(AppLocalizations.of(context).description),
-            ),
-            Image.asset('assets/images/pushups.jpeg'),
-            Text(
-              AppLocalizations.of(context).startQuestion,
-              style: Theme.of(context).textTheme.headline5,
-              textAlign: TextAlign.center,
-            ),
-            const SizedBox(
-              height: 40,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: const [
-                _SelectTrainingProgramButton(title: '0-5', program: 0),
-                _SelectTrainingProgramButton(title: '6-14', program: 1),
-                _SelectTrainingProgramButton(title: '15-29', program: 2),
+      body: SafeArea(
+        child: Center(
+          child: SingleChildScrollView(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.all(8),
+                  child: Text(AppLocalizations.of(context).description),
+                ),
+                Image.asset('assets/images/pushups.jpeg'),
+                Text(
+                  AppLocalizations.of(context).startQuestion,
+                  style: Theme.of(context).textTheme.headline5,
+                  textAlign: TextAlign.center,
+                ),
+                const SizedBox(
+                  height: 40,
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: const [
+                    _SelectTrainingProgramButton(title: '0-5', program: 0),
+                    _SelectTrainingProgramButton(title: '6-14', program: 1),
+                    _SelectTrainingProgramButton(title: '15-29', program: 2),
+                  ],
+                ),
               ],
             ),
-          ],
+          ),
         ),
       ),
     );
