@@ -12,7 +12,7 @@ import '../features/core/service/current_day_repository.dart' as _i9;
 import '../features/core/service/days_repository.dart' as _i4;
 import '../features/list/cubit/days_cubit.dart' as _i10;
 import '../features/rest/bloc/timer_bloc.dart' as _i7;
-import '../features/rest/ticker.dart' as _i6;
+import '../features/rest/util/ticker.dart' as _i6;
 import '../features/training/cubit/training_cubit.dart' as _i8;
 import '../routes/app_router.dart' as _i3;
 import 'shared_preferences_module.dart' as _i11;
