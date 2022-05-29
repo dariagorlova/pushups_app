@@ -1,16 +1,16 @@
-# pushups_app
+# 100 pushups
 
-A new Flutter project.
+The program to train your body to go from 1 pushup to 100 consecutive reps in less than two months
 
 ## Getting Started
+The workouts are tailored to your starting level. The initial window is called once, but you can change the training program by simply switching to the appropriate tab later.
 
-This project is a starting point for a Flutter application.
+## Let's train
+After starting the program and selecting the current training day (it is highlighted), you must put your device on the floor near your nose and when you do one push-up, touch the screen with your nose. The number on the screen will decrease. When the whole approach is completed, you will have a certain time to rest.
 
-A few resources to get you started if this is your first Flutter project:
+Training List Screen       |  Rest Screen
+:-------------------------:|:-------------------------:
+![](./assets/images/training_screen.png)  |  ![](./assets/images/rest_screen.png)
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+The program supports localization (English, Ukrainian)
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
