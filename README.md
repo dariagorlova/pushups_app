@@ -10,9 +10,7 @@ After starting the program and selecting the current training day (it is highlig
 
 Training List Screen       |  Rest Screen
 :-------------------------:|:-------------------------:
-![](https://raw.githubusercontent.com/dariagorlova/pushups_app/master/doc/training_screen.png)  | ![](https://raw.githubusercontent.com/dariagorlova/pushups_app/master/doc/rest_screen.png)
-
-<img src="https://raw.githubusercontent.com/dariagorlova/pushups_app/master/doc/training_screen.png" width="250" height="500" >  | <img src="https://raw.githubusercontent.com/dariagorlova/pushups_app/master/doc/rest_screen.png" width="250" height="500" >
+<img src="https://raw.githubusercontent.com/dariagorlova/pushups_app/master/doc/training_screen.png" width="250" height="500" > | <img src="https://raw.githubusercontent.com/dariagorlova/pushups_app/master/doc/rest_screen.png" width="250" height="500" >
 
 
 
