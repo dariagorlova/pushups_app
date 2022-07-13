@@ -31,8 +31,15 @@ class _MyAppState extends State<MyApp> {
   @override
   void initState() {
     super.initState();
+    getIt.pushNewScope();
     _initialization =
         widget.initialization ?? configureInjection(Environment.prod);
+  }
+
+  @override
+  void dispose() {
+    getIt.popScope();
+    super.dispose();
   }
 
   @override
@@ -61,6 +68,7 @@ class _MyAppState extends State<MyApp> {
               AppLocalizations.delegate,
               GlobalMaterialLocalizations.delegate,
               GlobalWidgetsLocalizations.delegate,
+              GlobalCupertinoLocalizations.delegate,
             ],
             supportedLocales: AppLocalizations.supportedLocales,
           );
