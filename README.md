@@ -12,5 +12,6 @@ Training List Screen       |  Rest Screen
 :-------------------------:|:-------------------------:
 ![](https://raw.githubusercontent.com/dariagorlova/pushups_app/master/doc/training_screen.png) | ![](https://raw.githubusercontent.com/dariagorlova/pushups_app/master/doc/rest_screen.png)
 
+
 The program supports localization (English, Ukrainian)
 
