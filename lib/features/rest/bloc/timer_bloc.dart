@@ -2,8 +2,9 @@ import 'dart:async';
 import 'package:bloc/bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';
+import 'package:pushups_app/features/core/service/pushups_navigator.dart';
 import 'package:pushups_app/features/rest/util/ticker.dart';
-import 'package:pushups_app/routes/app_router.dart';
+//import 'package:pushups_app/routes/app_router.dart';
 
 part 'timer_event.dart';
 part 'timer_state.dart';
@@ -26,7 +27,8 @@ class TimerBloc extends Bloc<TimerEvent, TimerState> {
   }
 
   final Ticker _ticker;
-  final AppRouter _router;
+  //final AppRouter _router;
+  final PushupsNavigator _router;
   late final StreamSubscription<int>? _tickerSubscription;
 
   @override
