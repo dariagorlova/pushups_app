@@ -1,9 +1,11 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:pushups_app/di/injection.dart';
 import 'package:pushups_app/features/rest/bloc/timer_bloc.dart';
 import 'package:pushups_app/localization/localization.dart';
 
+@RoutePage()
 class RestScreen extends StatelessWidget {
   const RestScreen({
     required this.timeRestInSec,
@@ -36,11 +38,11 @@ class TimerView extends StatelessWidget {
               children: [
                 Text(
                   AppLocalizations.of(context).timeToRest,
-                  style: Theme.of(context).textTheme.headline3,
+                  style: Theme.of(context).textTheme.displaySmall,
                 ),
                 Text(
                   AppLocalizations.of(context).continueIn,
-                  style: Theme.of(context).textTheme.headline4,
+                  style: Theme.of(context).textTheme.headlineMedium,
                 ),
               ],
             ),
@@ -59,12 +61,14 @@ class TimerText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final duration = context.select((TimerBloc bloc) => bloc.state.duration);
-    final minutesStr =
-        ((duration / 60) % 60).floor().toString().padLeft(2, '0');
+    final minutesStr = ((duration / 60) % 60).floor().toString().padLeft(
+          2,
+          '0',
+        );
     final secondsStr = (duration % 60).toString().padLeft(2, '0');
     return Text(
       '$minutesStr:$secondsStr',
-      style: Theme.of(context).textTheme.headline1,
+      style: Theme.of(context).textTheme.displayLarge,
     );
   }
 }

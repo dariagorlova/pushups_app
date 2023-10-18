@@ -4,10 +4,11 @@ import 'package:pushups_app/di/injection.config.dart';
 
 final GetIt getIt = GetIt.instance;
 
-@injectableInit
-Future<GetIt> configureInjection(String environment) {
-  return $initGetIt(
-    getIt,
-    environment: environment,
-  );
-}
+@InjectableInit(
+  initializerName: 'init',
+  preferRelativeImports: true,
+  asExtension: true,
+)
+Future<GetIt> configureDependencies({String? env}) => getIt.init(
+      environment: env,
+    );

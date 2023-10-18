@@ -1,3 +1,4 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:pushups_app/di/injection.dart';
@@ -7,6 +8,7 @@ import 'package:pushups_app/features/list/screen/widgets/exercise_list_view.dart
 import 'package:pushups_app/features/list/screen/widgets/loading_indicator.dart';
 import 'package:pushups_app/features/list/screen/widgets/select_training_program_view.dart';
 
+@RoutePage()
 class ListDaysScreen extends StatelessWidget {
   const ListDaysScreen({super.key});
 

@@ -8,7 +8,6 @@ import 'package:pushups_app/main.dart';
 import '../util/test_injection.dart';
 
 Future<void> theAppIsRunning(WidgetTester tester) async {
-  //await tester.pumpWidget(MyApp());
   await di.getIt.reset();
   await tester.pumpWidget(
     MyApp(

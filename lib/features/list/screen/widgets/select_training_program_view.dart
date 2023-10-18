@@ -22,15 +22,15 @@ class SelectTrainingProgramView extends StatelessWidget {
                 Image.asset('assets/images/pushups.jpeg'),
                 Text(
                   AppLocalizations.of(context).startQuestion,
-                  style: Theme.of(context).textTheme.headline5,
+                  style: Theme.of(context).textTheme.headlineSmall,
                   textAlign: TextAlign.center,
                 ),
                 const SizedBox(
                   height: 40,
                 ),
-                Row(
+                const Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: const [
+                  children: [
                     _SelectTrainingProgramButton(title: '0-5', program: 0),
                     _SelectTrainingProgramButton(title: '6-14', program: 1),
                     _SelectTrainingProgramButton(title: '15-29', program: 2),
@@ -64,7 +64,7 @@ class _SelectTrainingProgramButton extends StatelessWidget {
         },
         child: Text(
           title,
-          style: Theme.of(context).textTheme.headline6,
+          style: Theme.of(context).textTheme.titleLarge,
         ),
       ),
     );

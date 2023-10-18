@@ -1,3 +1,4 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:pushups_app/di/injection.dart';
@@ -5,6 +6,7 @@ import 'package:pushups_app/features/training/cubit/training_cubit.dart';
 import 'package:pushups_app/features/training/cubit/training_state.dart';
 import 'package:pushups_app/localization/localization.dart';
 
+@RoutePage()
 class TrainingScreen extends StatelessWidget {
   const TrainingScreen({
     required this.day,

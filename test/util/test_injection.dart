@@ -6,7 +6,7 @@ import 'package:pushups_app/features/core/service/current_day_repository.dart';
 import 'fake_current_days_repository.dart';
 
 Future<GetIt> configureInjection() async {
-  final getIt = await di.configureInjection(Environment.test);
+  final getIt = await di.configureDependencies(env: Environment.test);
   getIt.registerLazySingleton<CurrentDayRepository>(
     FakeCurrentDayRepository.new,
   );

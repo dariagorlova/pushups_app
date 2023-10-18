@@ -32,8 +32,10 @@ class _MyAppState extends State<MyApp> {
   void initState() {
     super.initState();
     getIt.pushNewScope();
-    _initialization =
-        widget.initialization ?? configureInjection(Environment.prod);
+    _initialization = widget.initialization ??
+        configureDependencies(
+          env: Environment.prod,
+        );
   }
 
   @override
@@ -53,14 +55,14 @@ class _MyAppState extends State<MyApp> {
             locale: widget.locale,
             debugShowCheckedModeBanner: false,
             theme: ThemeData(
-              primarySwatch: Colors.orange,
-              backgroundColor: Colors.orangeAccent.shade100,
               cardColor: Colors.white,
               tabBarTheme: TabBarTheme(
                 labelColor: Theme.of(context).cardColor,
                 unselectedLabelColor: Colors.black,
                 labelStyle: Theme.of(context).textTheme.titleLarge,
               ),
+              colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.orange)
+                  .copyWith(background: Colors.orangeAccent.shade100),
             ),
             routeInformationParser: getIt<AppRouter>().defaultRouteParser(),
             routerDelegate: getIt<AppRouter>().delegate(),

@@ -6,8 +6,8 @@ import 'package:pushups_app/localization/localization.dart';
 
 class ExercieListView extends StatelessWidget {
   const ExercieListView({
-    super.key,
     required this.state,
+    super.key,
   });
 
   final LoadedDaysState state;
@@ -19,7 +19,7 @@ class ExercieListView extends StatelessWidget {
       initialIndex: state.selectedTypeOfTraining,
       length: 3,
       child: Scaffold(
-        backgroundColor: Theme.of(context).backgroundColor,
+        backgroundColor: Theme.of(context).colorScheme.background,
         appBar: AppBar(
           title: Text(translations.mainPageTitle),
           automaticallyImplyLeading: false,
@@ -70,5 +70,10 @@ class ExercieListView extends StatelessWidget {
   }
 }
 
-String _listPushupsToString(List<int> list) =>
-    list.map((i) => i.toString()).join('-');
+String _listPushupsToString(List<int> list) => list
+    .map(
+      (i) => i.toString(),
+    )
+    .join(
+      '-',
+    );
