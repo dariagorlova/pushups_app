@@ -14,12 +14,12 @@ import './step/i_dismiss_the_page.dart';
 import './step/i_wait.dart';
 
 void main() {
-  Future<void> bddSetUp(WidgetTester tester) async {
-    await theAppIsRunning(tester);
-    await imOnTrainingProgram(tester, 0);
-    await iTapText(tester, 'Week 1, Day 1');
-  }
   group('''Training page''', () {
+    Future<void> bddSetUp(WidgetTester tester) async {
+      await theAppIsRunning(tester);
+      await imOnTrainingProgram(tester, 0);
+      await iTapText(tester, 'Week 1, Day 1');
+    }
     testWidgets('''The user start training''', (tester) async {
       await bddSetUp(tester);
       await iSeeText(tester, '2');

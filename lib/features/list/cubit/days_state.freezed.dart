@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'days_state.dart';
 
@@ -31,12 +31,12 @@ mixin _$DaysState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(int selectedTypeOfTraining, CurrentDay currentDay)?
+    TResult? Function(int selectedTypeOfTraining, CurrentDay currentDay)?
         initial,
-    TResult Function(int selectedTypeOfTraining, CurrentDay currentDay,
+    TResult? Function(int selectedTypeOfTraining, CurrentDay currentDay,
             List<DayViewModel> allDays)?
         loaded,
-    TResult Function(int selectedTypeOfTraining, CurrentDay currentDay)?
+    TResult? Function(int selectedTypeOfTraining, CurrentDay currentDay)?
         loading,
   }) =>
       throw _privateConstructorUsedError;
@@ -61,9 +61,9 @@ mixin _$DaysState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(InitialDaysState value)? initial,
-    TResult Function(LoadedDaysState value)? loaded,
-    TResult Function(LoadingDaysState value)? loading,
+    TResult? Function(InitialDaysState value)? initial,
+    TResult? Function(LoadedDaysState value)? loaded,
+    TResult? Function(LoadingDaysState value)? loading,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -83,52 +83,58 @@ mixin _$DaysState {
 /// @nodoc
 abstract class $DaysStateCopyWith<$Res> {
   factory $DaysStateCopyWith(DaysState value, $Res Function(DaysState) then) =
-      _$DaysStateCopyWithImpl<$Res>;
+      _$DaysStateCopyWithImpl<$Res, DaysState>;
+  @useResult
   $Res call({int selectedTypeOfTraining, CurrentDay currentDay});
 
   $CurrentDayCopyWith<$Res> get currentDay;
 }
 
 /// @nodoc
-class _$DaysStateCopyWithImpl<$Res> implements $DaysStateCopyWith<$Res> {
+class _$DaysStateCopyWithImpl<$Res, $Val extends DaysState>
+    implements $DaysStateCopyWith<$Res> {
   _$DaysStateCopyWithImpl(this._value, this._then);
 
-  final DaysState _value;
   // ignore: unused_field
-  final $Res Function(DaysState) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? selectedTypeOfTraining = freezed,
-    Object? currentDay = freezed,
+    Object? selectedTypeOfTraining = null,
+    Object? currentDay = null,
   }) {
     return _then(_value.copyWith(
-      selectedTypeOfTraining: selectedTypeOfTraining == freezed
+      selectedTypeOfTraining: null == selectedTypeOfTraining
           ? _value.selectedTypeOfTraining
           : selectedTypeOfTraining // ignore: cast_nullable_to_non_nullable
               as int,
-      currentDay: currentDay == freezed
+      currentDay: null == currentDay
           ? _value.currentDay
           : currentDay // ignore: cast_nullable_to_non_nullable
               as CurrentDay,
-    ));
+    ) as $Val);
   }
 
   @override
+  @pragma('vm:prefer-inline')
   $CurrentDayCopyWith<$Res> get currentDay {
     return $CurrentDayCopyWith<$Res>(_value.currentDay, (value) {
-      return _then(_value.copyWith(currentDay: value));
+      return _then(_value.copyWith(currentDay: value) as $Val);
     });
   }
 }
 
 /// @nodoc
-abstract class _$$InitialDaysStateCopyWith<$Res>
+abstract class _$$InitialDaysStateImplCopyWith<$Res>
     implements $DaysStateCopyWith<$Res> {
-  factory _$$InitialDaysStateCopyWith(
-          _$InitialDaysState value, $Res Function(_$InitialDaysState) then) =
-      __$$InitialDaysStateCopyWithImpl<$Res>;
+  factory _$$InitialDaysStateImplCopyWith(_$InitialDaysStateImpl value,
+          $Res Function(_$InitialDaysStateImpl) then) =
+      __$$InitialDaysStateImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({int selectedTypeOfTraining, CurrentDay currentDay});
 
   @override
@@ -136,27 +142,25 @@ abstract class _$$InitialDaysStateCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$InitialDaysStateCopyWithImpl<$Res>
-    extends _$DaysStateCopyWithImpl<$Res>
-    implements _$$InitialDaysStateCopyWith<$Res> {
-  __$$InitialDaysStateCopyWithImpl(
-      _$InitialDaysState _value, $Res Function(_$InitialDaysState) _then)
-      : super(_value, (v) => _then(v as _$InitialDaysState));
+class __$$InitialDaysStateImplCopyWithImpl<$Res>
+    extends _$DaysStateCopyWithImpl<$Res, _$InitialDaysStateImpl>
+    implements _$$InitialDaysStateImplCopyWith<$Res> {
+  __$$InitialDaysStateImplCopyWithImpl(_$InitialDaysStateImpl _value,
+      $Res Function(_$InitialDaysStateImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _$InitialDaysState get _value => super._value as _$InitialDaysState;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? selectedTypeOfTraining = freezed,
-    Object? currentDay = freezed,
+    Object? selectedTypeOfTraining = null,
+    Object? currentDay = null,
   }) {
-    return _then(_$InitialDaysState(
-      selectedTypeOfTraining: selectedTypeOfTraining == freezed
+    return _then(_$InitialDaysStateImpl(
+      selectedTypeOfTraining: null == selectedTypeOfTraining
           ? _value.selectedTypeOfTraining
           : selectedTypeOfTraining // ignore: cast_nullable_to_non_nullable
               as int,
-      currentDay: currentDay == freezed
+      currentDay: null == currentDay
           ? _value.currentDay
           : currentDay // ignore: cast_nullable_to_non_nullable
               as CurrentDay,
@@ -166,8 +170,8 @@ class __$$InitialDaysStateCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$InitialDaysState implements InitialDaysState {
-  const _$InitialDaysState(
+class _$InitialDaysStateImpl implements InitialDaysState {
+  const _$InitialDaysStateImpl(
       {this.selectedTypeOfTraining = 0,
       this.currentDay = const CurrentDay(dayNumber: 0, typeTraining: 0)});
 
@@ -187,23 +191,23 @@ class _$InitialDaysState implements InitialDaysState {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$InitialDaysState &&
-            const DeepCollectionEquality()
-                .equals(other.selectedTypeOfTraining, selectedTypeOfTraining) &&
-            const DeepCollectionEquality()
-                .equals(other.currentDay, currentDay));
+            other is _$InitialDaysStateImpl &&
+            (identical(other.selectedTypeOfTraining, selectedTypeOfTraining) ||
+                other.selectedTypeOfTraining == selectedTypeOfTraining) &&
+            (identical(other.currentDay, currentDay) ||
+                other.currentDay == currentDay));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(selectedTypeOfTraining),
-      const DeepCollectionEquality().hash(currentDay));
+  int get hashCode =>
+      Object.hash(runtimeType, selectedTypeOfTraining, currentDay);
 
   @JsonKey(ignore: true)
   @override
-  _$$InitialDaysStateCopyWith<_$InitialDaysState> get copyWith =>
-      __$$InitialDaysStateCopyWithImpl<_$InitialDaysState>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$InitialDaysStateImplCopyWith<_$InitialDaysStateImpl> get copyWith =>
+      __$$InitialDaysStateImplCopyWithImpl<_$InitialDaysStateImpl>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -222,12 +226,12 @@ class _$InitialDaysState implements InitialDaysState {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(int selectedTypeOfTraining, CurrentDay currentDay)?
+    TResult? Function(int selectedTypeOfTraining, CurrentDay currentDay)?
         initial,
-    TResult Function(int selectedTypeOfTraining, CurrentDay currentDay,
+    TResult? Function(int selectedTypeOfTraining, CurrentDay currentDay,
             List<DayViewModel> allDays)?
         loaded,
-    TResult Function(int selectedTypeOfTraining, CurrentDay currentDay)?
+    TResult? Function(int selectedTypeOfTraining, CurrentDay currentDay)?
         loading,
   }) {
     return initial?.call(selectedTypeOfTraining, currentDay);
@@ -264,9 +268,9 @@ class _$InitialDaysState implements InitialDaysState {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(InitialDaysState value)? initial,
-    TResult Function(LoadedDaysState value)? loaded,
-    TResult Function(LoadingDaysState value)? loading,
+    TResult? Function(InitialDaysState value)? initial,
+    TResult? Function(LoadedDaysState value)? loaded,
+    TResult? Function(LoadingDaysState value)? loading,
   }) {
     return initial?.call(this);
   }
@@ -289,25 +293,26 @@ class _$InitialDaysState implements InitialDaysState {
 abstract class InitialDaysState implements DaysState {
   const factory InitialDaysState(
       {final int selectedTypeOfTraining,
-      final CurrentDay currentDay}) = _$InitialDaysState;
+      final CurrentDay currentDay}) = _$InitialDaysStateImpl;
 
   @override
-  int get selectedTypeOfTraining => throw _privateConstructorUsedError;
+  int get selectedTypeOfTraining;
   @override
-  CurrentDay get currentDay => throw _privateConstructorUsedError;
+  CurrentDay get currentDay;
   @override
   @JsonKey(ignore: true)
-  _$$InitialDaysStateCopyWith<_$InitialDaysState> get copyWith =>
+  _$$InitialDaysStateImplCopyWith<_$InitialDaysStateImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$LoadedDaysStateCopyWith<$Res>
+abstract class _$$LoadedDaysStateImplCopyWith<$Res>
     implements $DaysStateCopyWith<$Res> {
-  factory _$$LoadedDaysStateCopyWith(
-          _$LoadedDaysState value, $Res Function(_$LoadedDaysState) then) =
-      __$$LoadedDaysStateCopyWithImpl<$Res>;
+  factory _$$LoadedDaysStateImplCopyWith(_$LoadedDaysStateImpl value,
+          $Res Function(_$LoadedDaysStateImpl) then) =
+      __$$LoadedDaysStateImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {int selectedTypeOfTraining,
       CurrentDay currentDay,
@@ -318,32 +323,30 @@ abstract class _$$LoadedDaysStateCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$LoadedDaysStateCopyWithImpl<$Res>
-    extends _$DaysStateCopyWithImpl<$Res>
-    implements _$$LoadedDaysStateCopyWith<$Res> {
-  __$$LoadedDaysStateCopyWithImpl(
-      _$LoadedDaysState _value, $Res Function(_$LoadedDaysState) _then)
-      : super(_value, (v) => _then(v as _$LoadedDaysState));
+class __$$LoadedDaysStateImplCopyWithImpl<$Res>
+    extends _$DaysStateCopyWithImpl<$Res, _$LoadedDaysStateImpl>
+    implements _$$LoadedDaysStateImplCopyWith<$Res> {
+  __$$LoadedDaysStateImplCopyWithImpl(
+      _$LoadedDaysStateImpl _value, $Res Function(_$LoadedDaysStateImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _$LoadedDaysState get _value => super._value as _$LoadedDaysState;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? selectedTypeOfTraining = freezed,
-    Object? currentDay = freezed,
-    Object? allDays = freezed,
+    Object? selectedTypeOfTraining = null,
+    Object? currentDay = null,
+    Object? allDays = null,
   }) {
-    return _then(_$LoadedDaysState(
-      selectedTypeOfTraining: selectedTypeOfTraining == freezed
+    return _then(_$LoadedDaysStateImpl(
+      selectedTypeOfTraining: null == selectedTypeOfTraining
           ? _value.selectedTypeOfTraining
           : selectedTypeOfTraining // ignore: cast_nullable_to_non_nullable
               as int,
-      currentDay: currentDay == freezed
+      currentDay: null == currentDay
           ? _value.currentDay
           : currentDay // ignore: cast_nullable_to_non_nullable
               as CurrentDay,
-      allDays: allDays == freezed
+      allDays: null == allDays
           ? _value._allDays
           : allDays // ignore: cast_nullable_to_non_nullable
               as List<DayViewModel>,
@@ -353,8 +356,8 @@ class __$$LoadedDaysStateCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$LoadedDaysState implements LoadedDaysState {
-  const _$LoadedDaysState(
+class _$LoadedDaysStateImpl implements LoadedDaysState {
+  const _$LoadedDaysStateImpl(
       {required this.selectedTypeOfTraining,
       required this.currentDay,
       required final List<DayViewModel> allDays})
@@ -367,6 +370,7 @@ class _$LoadedDaysState implements LoadedDaysState {
   final List<DayViewModel> _allDays;
   @override
   List<DayViewModel> get allDays {
+    if (_allDays is EqualUnmodifiableListView) return _allDays;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_allDays);
   }
@@ -380,25 +384,24 @@ class _$LoadedDaysState implements LoadedDaysState {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$LoadedDaysState &&
-            const DeepCollectionEquality()
-                .equals(other.selectedTypeOfTraining, selectedTypeOfTraining) &&
-            const DeepCollectionEquality()
-                .equals(other.currentDay, currentDay) &&
+            other is _$LoadedDaysStateImpl &&
+            (identical(other.selectedTypeOfTraining, selectedTypeOfTraining) ||
+                other.selectedTypeOfTraining == selectedTypeOfTraining) &&
+            (identical(other.currentDay, currentDay) ||
+                other.currentDay == currentDay) &&
             const DeepCollectionEquality().equals(other._allDays, _allDays));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(selectedTypeOfTraining),
-      const DeepCollectionEquality().hash(currentDay),
-      const DeepCollectionEquality().hash(_allDays));
+  int get hashCode => Object.hash(runtimeType, selectedTypeOfTraining,
+      currentDay, const DeepCollectionEquality().hash(_allDays));
 
   @JsonKey(ignore: true)
   @override
-  _$$LoadedDaysStateCopyWith<_$LoadedDaysState> get copyWith =>
-      __$$LoadedDaysStateCopyWithImpl<_$LoadedDaysState>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$LoadedDaysStateImplCopyWith<_$LoadedDaysStateImpl> get copyWith =>
+      __$$LoadedDaysStateImplCopyWithImpl<_$LoadedDaysStateImpl>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -417,12 +420,12 @@ class _$LoadedDaysState implements LoadedDaysState {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(int selectedTypeOfTraining, CurrentDay currentDay)?
+    TResult? Function(int selectedTypeOfTraining, CurrentDay currentDay)?
         initial,
-    TResult Function(int selectedTypeOfTraining, CurrentDay currentDay,
+    TResult? Function(int selectedTypeOfTraining, CurrentDay currentDay,
             List<DayViewModel> allDays)?
         loaded,
-    TResult Function(int selectedTypeOfTraining, CurrentDay currentDay)?
+    TResult? Function(int selectedTypeOfTraining, CurrentDay currentDay)?
         loading,
   }) {
     return loaded?.call(selectedTypeOfTraining, currentDay, allDays);
@@ -459,9 +462,9 @@ class _$LoadedDaysState implements LoadedDaysState {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(InitialDaysState value)? initial,
-    TResult Function(LoadedDaysState value)? loaded,
-    TResult Function(LoadingDaysState value)? loading,
+    TResult? Function(InitialDaysState value)? initial,
+    TResult? Function(LoadedDaysState value)? loaded,
+    TResult? Function(LoadingDaysState value)? loading,
   }) {
     return loaded?.call(this);
   }
@@ -485,26 +488,27 @@ abstract class LoadedDaysState implements DaysState {
   const factory LoadedDaysState(
       {required final int selectedTypeOfTraining,
       required final CurrentDay currentDay,
-      required final List<DayViewModel> allDays}) = _$LoadedDaysState;
+      required final List<DayViewModel> allDays}) = _$LoadedDaysStateImpl;
 
   @override
-  int get selectedTypeOfTraining => throw _privateConstructorUsedError;
+  int get selectedTypeOfTraining;
   @override
-  CurrentDay get currentDay => throw _privateConstructorUsedError;
-  List<DayViewModel> get allDays => throw _privateConstructorUsedError;
+  CurrentDay get currentDay;
+  List<DayViewModel> get allDays;
   @override
   @JsonKey(ignore: true)
-  _$$LoadedDaysStateCopyWith<_$LoadedDaysState> get copyWith =>
+  _$$LoadedDaysStateImplCopyWith<_$LoadedDaysStateImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$LoadingDaysStateCopyWith<$Res>
+abstract class _$$LoadingDaysStateImplCopyWith<$Res>
     implements $DaysStateCopyWith<$Res> {
-  factory _$$LoadingDaysStateCopyWith(
-          _$LoadingDaysState value, $Res Function(_$LoadingDaysState) then) =
-      __$$LoadingDaysStateCopyWithImpl<$Res>;
+  factory _$$LoadingDaysStateImplCopyWith(_$LoadingDaysStateImpl value,
+          $Res Function(_$LoadingDaysStateImpl) then) =
+      __$$LoadingDaysStateImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({int selectedTypeOfTraining, CurrentDay currentDay});
 
   @override
@@ -512,27 +516,25 @@ abstract class _$$LoadingDaysStateCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$LoadingDaysStateCopyWithImpl<$Res>
-    extends _$DaysStateCopyWithImpl<$Res>
-    implements _$$LoadingDaysStateCopyWith<$Res> {
-  __$$LoadingDaysStateCopyWithImpl(
-      _$LoadingDaysState _value, $Res Function(_$LoadingDaysState) _then)
-      : super(_value, (v) => _then(v as _$LoadingDaysState));
+class __$$LoadingDaysStateImplCopyWithImpl<$Res>
+    extends _$DaysStateCopyWithImpl<$Res, _$LoadingDaysStateImpl>
+    implements _$$LoadingDaysStateImplCopyWith<$Res> {
+  __$$LoadingDaysStateImplCopyWithImpl(_$LoadingDaysStateImpl _value,
+      $Res Function(_$LoadingDaysStateImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _$LoadingDaysState get _value => super._value as _$LoadingDaysState;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? selectedTypeOfTraining = freezed,
-    Object? currentDay = freezed,
+    Object? selectedTypeOfTraining = null,
+    Object? currentDay = null,
   }) {
-    return _then(_$LoadingDaysState(
-      selectedTypeOfTraining: selectedTypeOfTraining == freezed
+    return _then(_$LoadingDaysStateImpl(
+      selectedTypeOfTraining: null == selectedTypeOfTraining
           ? _value.selectedTypeOfTraining
           : selectedTypeOfTraining // ignore: cast_nullable_to_non_nullable
               as int,
-      currentDay: currentDay == freezed
+      currentDay: null == currentDay
           ? _value.currentDay
           : currentDay // ignore: cast_nullable_to_non_nullable
               as CurrentDay,
@@ -542,8 +544,8 @@ class __$$LoadingDaysStateCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$LoadingDaysState implements LoadingDaysState {
-  const _$LoadingDaysState(
+class _$LoadingDaysStateImpl implements LoadingDaysState {
+  const _$LoadingDaysStateImpl(
       {required this.selectedTypeOfTraining, required this.currentDay});
 
   @override
@@ -560,23 +562,23 @@ class _$LoadingDaysState implements LoadingDaysState {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$LoadingDaysState &&
-            const DeepCollectionEquality()
-                .equals(other.selectedTypeOfTraining, selectedTypeOfTraining) &&
-            const DeepCollectionEquality()
-                .equals(other.currentDay, currentDay));
+            other is _$LoadingDaysStateImpl &&
+            (identical(other.selectedTypeOfTraining, selectedTypeOfTraining) ||
+                other.selectedTypeOfTraining == selectedTypeOfTraining) &&
+            (identical(other.currentDay, currentDay) ||
+                other.currentDay == currentDay));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(selectedTypeOfTraining),
-      const DeepCollectionEquality().hash(currentDay));
+  int get hashCode =>
+      Object.hash(runtimeType, selectedTypeOfTraining, currentDay);
 
   @JsonKey(ignore: true)
   @override
-  _$$LoadingDaysStateCopyWith<_$LoadingDaysState> get copyWith =>
-      __$$LoadingDaysStateCopyWithImpl<_$LoadingDaysState>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$LoadingDaysStateImplCopyWith<_$LoadingDaysStateImpl> get copyWith =>
+      __$$LoadingDaysStateImplCopyWithImpl<_$LoadingDaysStateImpl>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -595,12 +597,12 @@ class _$LoadingDaysState implements LoadingDaysState {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(int selectedTypeOfTraining, CurrentDay currentDay)?
+    TResult? Function(int selectedTypeOfTraining, CurrentDay currentDay)?
         initial,
-    TResult Function(int selectedTypeOfTraining, CurrentDay currentDay,
+    TResult? Function(int selectedTypeOfTraining, CurrentDay currentDay,
             List<DayViewModel> allDays)?
         loaded,
-    TResult Function(int selectedTypeOfTraining, CurrentDay currentDay)?
+    TResult? Function(int selectedTypeOfTraining, CurrentDay currentDay)?
         loading,
   }) {
     return loading?.call(selectedTypeOfTraining, currentDay);
@@ -637,9 +639,9 @@ class _$LoadingDaysState implements LoadingDaysState {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(InitialDaysState value)? initial,
-    TResult Function(LoadedDaysState value)? loaded,
-    TResult Function(LoadingDaysState value)? loading,
+    TResult? Function(InitialDaysState value)? initial,
+    TResult? Function(LoadedDaysState value)? loaded,
+    TResult? Function(LoadingDaysState value)? loading,
   }) {
     return loading?.call(this);
   }
@@ -662,14 +664,14 @@ class _$LoadingDaysState implements LoadingDaysState {
 abstract class LoadingDaysState implements DaysState {
   const factory LoadingDaysState(
       {required final int selectedTypeOfTraining,
-      required final CurrentDay currentDay}) = _$LoadingDaysState;
+      required final CurrentDay currentDay}) = _$LoadingDaysStateImpl;
 
   @override
-  int get selectedTypeOfTraining => throw _privateConstructorUsedError;
+  int get selectedTypeOfTraining;
   @override
-  CurrentDay get currentDay => throw _privateConstructorUsedError;
+  CurrentDay get currentDay;
   @override
   @JsonKey(ignore: true)
-  _$$LoadingDaysStateCopyWith<_$LoadingDaysState> get copyWith =>
+  _$$LoadingDaysStateImplCopyWith<_$LoadingDaysStateImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

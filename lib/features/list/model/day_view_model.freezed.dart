@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'day_view_model.dart';
 
@@ -30,88 +30,91 @@ mixin _$DayViewModel {
 abstract class $DayViewModelCopyWith<$Res> {
   factory $DayViewModelCopyWith(
           DayViewModel value, $Res Function(DayViewModel) then) =
-      _$DayViewModelCopyWithImpl<$Res>;
+      _$DayViewModelCopyWithImpl<$Res, DayViewModel>;
+  @useResult
   $Res call({int day, List<int> listPushups, bool isCurrent, int timeRest});
 }
 
 /// @nodoc
-class _$DayViewModelCopyWithImpl<$Res> implements $DayViewModelCopyWith<$Res> {
+class _$DayViewModelCopyWithImpl<$Res, $Val extends DayViewModel>
+    implements $DayViewModelCopyWith<$Res> {
   _$DayViewModelCopyWithImpl(this._value, this._then);
 
-  final DayViewModel _value;
   // ignore: unused_field
-  final $Res Function(DayViewModel) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? day = freezed,
-    Object? listPushups = freezed,
-    Object? isCurrent = freezed,
-    Object? timeRest = freezed,
+    Object? day = null,
+    Object? listPushups = null,
+    Object? isCurrent = null,
+    Object? timeRest = null,
   }) {
     return _then(_value.copyWith(
-      day: day == freezed
+      day: null == day
           ? _value.day
           : day // ignore: cast_nullable_to_non_nullable
               as int,
-      listPushups: listPushups == freezed
+      listPushups: null == listPushups
           ? _value.listPushups
           : listPushups // ignore: cast_nullable_to_non_nullable
               as List<int>,
-      isCurrent: isCurrent == freezed
+      isCurrent: null == isCurrent
           ? _value.isCurrent
           : isCurrent // ignore: cast_nullable_to_non_nullable
               as bool,
-      timeRest: timeRest == freezed
+      timeRest: null == timeRest
           ? _value.timeRest
           : timeRest // ignore: cast_nullable_to_non_nullable
               as int,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$$_DayViewModelCopyWith<$Res>
+abstract class _$$DayViewModelImplCopyWith<$Res>
     implements $DayViewModelCopyWith<$Res> {
-  factory _$$_DayViewModelCopyWith(
-          _$_DayViewModel value, $Res Function(_$_DayViewModel) then) =
-      __$$_DayViewModelCopyWithImpl<$Res>;
+  factory _$$DayViewModelImplCopyWith(
+          _$DayViewModelImpl value, $Res Function(_$DayViewModelImpl) then) =
+      __$$DayViewModelImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({int day, List<int> listPushups, bool isCurrent, int timeRest});
 }
 
 /// @nodoc
-class __$$_DayViewModelCopyWithImpl<$Res>
-    extends _$DayViewModelCopyWithImpl<$Res>
-    implements _$$_DayViewModelCopyWith<$Res> {
-  __$$_DayViewModelCopyWithImpl(
-      _$_DayViewModel _value, $Res Function(_$_DayViewModel) _then)
-      : super(_value, (v) => _then(v as _$_DayViewModel));
+class __$$DayViewModelImplCopyWithImpl<$Res>
+    extends _$DayViewModelCopyWithImpl<$Res, _$DayViewModelImpl>
+    implements _$$DayViewModelImplCopyWith<$Res> {
+  __$$DayViewModelImplCopyWithImpl(
+      _$DayViewModelImpl _value, $Res Function(_$DayViewModelImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _$_DayViewModel get _value => super._value as _$_DayViewModel;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? day = freezed,
-    Object? listPushups = freezed,
-    Object? isCurrent = freezed,
-    Object? timeRest = freezed,
+    Object? day = null,
+    Object? listPushups = null,
+    Object? isCurrent = null,
+    Object? timeRest = null,
   }) {
-    return _then(_$_DayViewModel(
-      day: day == freezed
+    return _then(_$DayViewModelImpl(
+      day: null == day
           ? _value.day
           : day // ignore: cast_nullable_to_non_nullable
               as int,
-      listPushups: listPushups == freezed
+      listPushups: null == listPushups
           ? _value._listPushups
           : listPushups // ignore: cast_nullable_to_non_nullable
               as List<int>,
-      isCurrent: isCurrent == freezed
+      isCurrent: null == isCurrent
           ? _value.isCurrent
           : isCurrent // ignore: cast_nullable_to_non_nullable
               as bool,
-      timeRest: timeRest == freezed
+      timeRest: null == timeRest
           ? _value.timeRest
           : timeRest // ignore: cast_nullable_to_non_nullable
               as int,
@@ -121,8 +124,8 @@ class __$$_DayViewModelCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_DayViewModel implements _DayViewModel {
-  const _$_DayViewModel(
+class _$DayViewModelImpl implements _DayViewModel {
+  const _$DayViewModelImpl(
       {required this.day,
       required final List<int> listPushups,
       required this.isCurrent,
@@ -134,6 +137,7 @@ class _$_DayViewModel implements _DayViewModel {
   final List<int> _listPushups;
   @override
   List<int> get listPushups {
+    if (_listPushups is EqualUnmodifiableListView) return _listPushups;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_listPushups);
   }
@@ -152,26 +156,25 @@ class _$_DayViewModel implements _DayViewModel {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_DayViewModel &&
-            const DeepCollectionEquality().equals(other.day, day) &&
+            other is _$DayViewModelImpl &&
+            (identical(other.day, day) || other.day == day) &&
             const DeepCollectionEquality()
                 .equals(other._listPushups, _listPushups) &&
-            const DeepCollectionEquality().equals(other.isCurrent, isCurrent) &&
-            const DeepCollectionEquality().equals(other.timeRest, timeRest));
+            (identical(other.isCurrent, isCurrent) ||
+                other.isCurrent == isCurrent) &&
+            (identical(other.timeRest, timeRest) ||
+                other.timeRest == timeRest));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(day),
-      const DeepCollectionEquality().hash(_listPushups),
-      const DeepCollectionEquality().hash(isCurrent),
-      const DeepCollectionEquality().hash(timeRest));
+  int get hashCode => Object.hash(runtimeType, day,
+      const DeepCollectionEquality().hash(_listPushups), isCurrent, timeRest);
 
   @JsonKey(ignore: true)
   @override
-  _$$_DayViewModelCopyWith<_$_DayViewModel> get copyWith =>
-      __$$_DayViewModelCopyWithImpl<_$_DayViewModel>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$DayViewModelImplCopyWith<_$DayViewModelImpl> get copyWith =>
+      __$$DayViewModelImplCopyWithImpl<_$DayViewModelImpl>(this, _$identity);
 }
 
 abstract class _DayViewModel implements DayViewModel {
@@ -179,18 +182,18 @@ abstract class _DayViewModel implements DayViewModel {
       {required final int day,
       required final List<int> listPushups,
       required final bool isCurrent,
-      required final int timeRest}) = _$_DayViewModel;
+      required final int timeRest}) = _$DayViewModelImpl;
 
   @override
-  int get day => throw _privateConstructorUsedError;
+  int get day;
   @override
-  List<int> get listPushups => throw _privateConstructorUsedError;
+  List<int> get listPushups;
   @override
-  bool get isCurrent => throw _privateConstructorUsedError;
+  bool get isCurrent;
   @override
-  int get timeRest => throw _privateConstructorUsedError;
+  int get timeRest;
   @override
   @JsonKey(ignore: true)
-  _$$_DayViewModelCopyWith<_$_DayViewModel> get copyWith =>
+  _$$DayViewModelImplCopyWith<_$DayViewModelImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

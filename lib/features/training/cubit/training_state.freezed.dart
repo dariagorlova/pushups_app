@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'training_state.dart';
 
@@ -31,7 +31,8 @@ mixin _$TrainingState {
 abstract class $TrainingStateCopyWith<$Res> {
   factory $TrainingStateCopyWith(
           TrainingState value, $Res Function(TrainingState) then) =
-      _$TrainingStateCopyWithImpl<$Res>;
+      _$TrainingStateCopyWithImpl<$Res, TrainingState>;
+  @useResult
   $Res call(
       {int curPushup,
       int curStep,
@@ -41,54 +42,57 @@ abstract class $TrainingStateCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$TrainingStateCopyWithImpl<$Res>
+class _$TrainingStateCopyWithImpl<$Res, $Val extends TrainingState>
     implements $TrainingStateCopyWith<$Res> {
   _$TrainingStateCopyWithImpl(this._value, this._then);
 
-  final TrainingState _value;
   // ignore: unused_field
-  final $Res Function(TrainingState) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? curPushup = freezed,
-    Object? curStep = freezed,
-    Object? isCancelled = freezed,
-    Object? listPushups = freezed,
-    Object? timeRestInSec = freezed,
+    Object? curPushup = null,
+    Object? curStep = null,
+    Object? isCancelled = null,
+    Object? listPushups = null,
+    Object? timeRestInSec = null,
   }) {
     return _then(_value.copyWith(
-      curPushup: curPushup == freezed
+      curPushup: null == curPushup
           ? _value.curPushup
           : curPushup // ignore: cast_nullable_to_non_nullable
               as int,
-      curStep: curStep == freezed
+      curStep: null == curStep
           ? _value.curStep
           : curStep // ignore: cast_nullable_to_non_nullable
               as int,
-      isCancelled: isCancelled == freezed
+      isCancelled: null == isCancelled
           ? _value.isCancelled
           : isCancelled // ignore: cast_nullable_to_non_nullable
               as bool,
-      listPushups: listPushups == freezed
+      listPushups: null == listPushups
           ? _value.listPushups
           : listPushups // ignore: cast_nullable_to_non_nullable
               as List<int>,
-      timeRestInSec: timeRestInSec == freezed
+      timeRestInSec: null == timeRestInSec
           ? _value.timeRestInSec
           : timeRestInSec // ignore: cast_nullable_to_non_nullable
               as int,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$$_TrainingStateCopyWith<$Res>
+abstract class _$$TrainingStateImplCopyWith<$Res>
     implements $TrainingStateCopyWith<$Res> {
-  factory _$$_TrainingStateCopyWith(
-          _$_TrainingState value, $Res Function(_$_TrainingState) then) =
-      __$$_TrainingStateCopyWithImpl<$Res>;
+  factory _$$TrainingStateImplCopyWith(
+          _$TrainingStateImpl value, $Res Function(_$TrainingStateImpl) then) =
+      __$$TrainingStateImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {int curPushup,
       int curStep,
@@ -98,42 +102,40 @@ abstract class _$$_TrainingStateCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$_TrainingStateCopyWithImpl<$Res>
-    extends _$TrainingStateCopyWithImpl<$Res>
-    implements _$$_TrainingStateCopyWith<$Res> {
-  __$$_TrainingStateCopyWithImpl(
-      _$_TrainingState _value, $Res Function(_$_TrainingState) _then)
-      : super(_value, (v) => _then(v as _$_TrainingState));
+class __$$TrainingStateImplCopyWithImpl<$Res>
+    extends _$TrainingStateCopyWithImpl<$Res, _$TrainingStateImpl>
+    implements _$$TrainingStateImplCopyWith<$Res> {
+  __$$TrainingStateImplCopyWithImpl(
+      _$TrainingStateImpl _value, $Res Function(_$TrainingStateImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _$_TrainingState get _value => super._value as _$_TrainingState;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? curPushup = freezed,
-    Object? curStep = freezed,
-    Object? isCancelled = freezed,
-    Object? listPushups = freezed,
-    Object? timeRestInSec = freezed,
+    Object? curPushup = null,
+    Object? curStep = null,
+    Object? isCancelled = null,
+    Object? listPushups = null,
+    Object? timeRestInSec = null,
   }) {
-    return _then(_$_TrainingState(
-      curPushup: curPushup == freezed
+    return _then(_$TrainingStateImpl(
+      curPushup: null == curPushup
           ? _value.curPushup
           : curPushup // ignore: cast_nullable_to_non_nullable
               as int,
-      curStep: curStep == freezed
+      curStep: null == curStep
           ? _value.curStep
           : curStep // ignore: cast_nullable_to_non_nullable
               as int,
-      isCancelled: isCancelled == freezed
+      isCancelled: null == isCancelled
           ? _value.isCancelled
           : isCancelled // ignore: cast_nullable_to_non_nullable
               as bool,
-      listPushups: listPushups == freezed
+      listPushups: null == listPushups
           ? _value._listPushups
           : listPushups // ignore: cast_nullable_to_non_nullable
               as List<int>,
-      timeRestInSec: timeRestInSec == freezed
+      timeRestInSec: null == timeRestInSec
           ? _value.timeRestInSec
           : timeRestInSec // ignore: cast_nullable_to_non_nullable
               as int,
@@ -143,8 +145,8 @@ class __$$_TrainingStateCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_TrainingState implements _TrainingState {
-  const _$_TrainingState(
+class _$TrainingStateImpl implements _TrainingState {
+  const _$TrainingStateImpl(
       {this.curPushup = 0,
       this.curStep = 0,
       this.isCancelled = false,
@@ -164,6 +166,7 @@ class _$_TrainingState implements _TrainingState {
   final List<int> _listPushups;
   @override
   List<int> get listPushups {
+    if (_listPushups is EqualUnmodifiableListView) return _listPushups;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_listPushups);
   }
@@ -180,30 +183,27 @@ class _$_TrainingState implements _TrainingState {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_TrainingState &&
-            const DeepCollectionEquality().equals(other.curPushup, curPushup) &&
-            const DeepCollectionEquality().equals(other.curStep, curStep) &&
-            const DeepCollectionEquality()
-                .equals(other.isCancelled, isCancelled) &&
+            other is _$TrainingStateImpl &&
+            (identical(other.curPushup, curPushup) ||
+                other.curPushup == curPushup) &&
+            (identical(other.curStep, curStep) || other.curStep == curStep) &&
+            (identical(other.isCancelled, isCancelled) ||
+                other.isCancelled == isCancelled) &&
             const DeepCollectionEquality()
                 .equals(other._listPushups, _listPushups) &&
-            const DeepCollectionEquality()
-                .equals(other.timeRestInSec, timeRestInSec));
+            (identical(other.timeRestInSec, timeRestInSec) ||
+                other.timeRestInSec == timeRestInSec));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(curPushup),
-      const DeepCollectionEquality().hash(curStep),
-      const DeepCollectionEquality().hash(isCancelled),
-      const DeepCollectionEquality().hash(_listPushups),
-      const DeepCollectionEquality().hash(timeRestInSec));
+  int get hashCode => Object.hash(runtimeType, curPushup, curStep, isCancelled,
+      const DeepCollectionEquality().hash(_listPushups), timeRestInSec);
 
   @JsonKey(ignore: true)
   @override
-  _$$_TrainingStateCopyWith<_$_TrainingState> get copyWith =>
-      __$$_TrainingStateCopyWithImpl<_$_TrainingState>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$TrainingStateImplCopyWith<_$TrainingStateImpl> get copyWith =>
+      __$$TrainingStateImplCopyWithImpl<_$TrainingStateImpl>(this, _$identity);
 }
 
 abstract class _TrainingState implements TrainingState {
@@ -212,20 +212,20 @@ abstract class _TrainingState implements TrainingState {
       final int curStep,
       final bool isCancelled,
       required final List<int> listPushups,
-      required final int timeRestInSec}) = _$_TrainingState;
+      required final int timeRestInSec}) = _$TrainingStateImpl;
 
   @override
-  int get curPushup => throw _privateConstructorUsedError;
+  int get curPushup;
   @override
-  int get curStep => throw _privateConstructorUsedError;
+  int get curStep;
   @override
-  bool get isCancelled => throw _privateConstructorUsedError;
+  bool get isCancelled;
   @override
-  List<int> get listPushups => throw _privateConstructorUsedError;
+  List<int> get listPushups;
   @override
-  int get timeRestInSec => throw _privateConstructorUsedError;
+  int get timeRestInSec;
   @override
   @JsonKey(ignore: true)
-  _$$_TrainingStateCopyWith<_$_TrainingState> get copyWith =>
+  _$$TrainingStateImplCopyWith<_$TrainingStateImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

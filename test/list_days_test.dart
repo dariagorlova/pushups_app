@@ -13,11 +13,11 @@ import './step/i_tap_text.dart';
 import './step/i_dont_see_listtile_with_color.dart';
 
 void main() {
-  Future<void> bddSetUp(WidgetTester tester) async {
-    await theAppIsRunning(tester);
-    await imOnTrainingProgram(tester, 0);
-  }
   group('''List of Training Days''', () {
+    Future<void> bddSetUp(WidgetTester tester) async {
+      await theAppIsRunning(tester);
+      await imOnTrainingProgram(tester, 0);
+    }
     testWidgets('''As a User I want to see list of training days''', (tester) async {
       await bddSetUp(tester);
       await iSeeWidget(tester, ListView);

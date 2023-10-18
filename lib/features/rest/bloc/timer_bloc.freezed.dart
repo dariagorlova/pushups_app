@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'timer_bloc.dart';
 
@@ -24,8 +24,8 @@ mixin _$TimerEvent {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? tick,
-    TResult Function()? goBack,
+    TResult? Function()? tick,
+    TResult? Function()? goBack,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -43,8 +43,8 @@ mixin _$TimerEvent {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_TickTimerEvent value)? tick,
-    TResult Function(_GoBackTimerEvent value)? goBack,
+    TResult? Function(_TickTimerEvent value)? tick,
+    TResult? Function(_GoBackTimerEvent value)? goBack,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -60,41 +60,40 @@ mixin _$TimerEvent {
 abstract class $TimerEventCopyWith<$Res> {
   factory $TimerEventCopyWith(
           TimerEvent value, $Res Function(TimerEvent) then) =
-      _$TimerEventCopyWithImpl<$Res>;
+      _$TimerEventCopyWithImpl<$Res, TimerEvent>;
 }
 
 /// @nodoc
-class _$TimerEventCopyWithImpl<$Res> implements $TimerEventCopyWith<$Res> {
+class _$TimerEventCopyWithImpl<$Res, $Val extends TimerEvent>
+    implements $TimerEventCopyWith<$Res> {
   _$TimerEventCopyWithImpl(this._value, this._then);
 
-  final TimerEvent _value;
   // ignore: unused_field
-  final $Res Function(TimerEvent) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 }
 
 /// @nodoc
-abstract class _$$_TickTimerEventCopyWith<$Res> {
-  factory _$$_TickTimerEventCopyWith(
-          _$_TickTimerEvent value, $Res Function(_$_TickTimerEvent) then) =
-      __$$_TickTimerEventCopyWithImpl<$Res>;
+abstract class _$$TickTimerEventImplCopyWith<$Res> {
+  factory _$$TickTimerEventImplCopyWith(_$TickTimerEventImpl value,
+          $Res Function(_$TickTimerEventImpl) then) =
+      __$$TickTimerEventImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_TickTimerEventCopyWithImpl<$Res>
-    extends _$TimerEventCopyWithImpl<$Res>
-    implements _$$_TickTimerEventCopyWith<$Res> {
-  __$$_TickTimerEventCopyWithImpl(
-      _$_TickTimerEvent _value, $Res Function(_$_TickTimerEvent) _then)
-      : super(_value, (v) => _then(v as _$_TickTimerEvent));
-
-  @override
-  _$_TickTimerEvent get _value => super._value as _$_TickTimerEvent;
+class __$$TickTimerEventImplCopyWithImpl<$Res>
+    extends _$TimerEventCopyWithImpl<$Res, _$TickTimerEventImpl>
+    implements _$$TickTimerEventImplCopyWith<$Res> {
+  __$$TickTimerEventImplCopyWithImpl(
+      _$TickTimerEventImpl _value, $Res Function(_$TickTimerEventImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_TickTimerEvent implements _TickTimerEvent {
-  const _$_TickTimerEvent();
+class _$TickTimerEventImpl implements _TickTimerEvent {
+  const _$TickTimerEventImpl();
 
   @override
   String toString() {
@@ -104,7 +103,7 @@ class _$_TickTimerEvent implements _TickTimerEvent {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_TickTimerEvent);
+        (other.runtimeType == runtimeType && other is _$TickTimerEventImpl);
   }
 
   @override
@@ -122,8 +121,8 @@ class _$_TickTimerEvent implements _TickTimerEvent {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? tick,
-    TResult Function()? goBack,
+    TResult? Function()? tick,
+    TResult? Function()? goBack,
   }) {
     return tick?.call();
   }
@@ -153,8 +152,8 @@ class _$_TickTimerEvent implements _TickTimerEvent {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_TickTimerEvent value)? tick,
-    TResult Function(_GoBackTimerEvent value)? goBack,
+    TResult? Function(_TickTimerEvent value)? tick,
+    TResult? Function(_GoBackTimerEvent value)? goBack,
   }) {
     return tick?.call(this);
   }
@@ -174,32 +173,29 @@ class _$_TickTimerEvent implements _TickTimerEvent {
 }
 
 abstract class _TickTimerEvent implements TimerEvent {
-  const factory _TickTimerEvent() = _$_TickTimerEvent;
+  const factory _TickTimerEvent() = _$TickTimerEventImpl;
 }
 
 /// @nodoc
-abstract class _$$_GoBackTimerEventCopyWith<$Res> {
-  factory _$$_GoBackTimerEventCopyWith(
-          _$_GoBackTimerEvent value, $Res Function(_$_GoBackTimerEvent) then) =
-      __$$_GoBackTimerEventCopyWithImpl<$Res>;
+abstract class _$$GoBackTimerEventImplCopyWith<$Res> {
+  factory _$$GoBackTimerEventImplCopyWith(_$GoBackTimerEventImpl value,
+          $Res Function(_$GoBackTimerEventImpl) then) =
+      __$$GoBackTimerEventImplCopyWithImpl<$Res>;
 }
 
 /// @nodoc
-class __$$_GoBackTimerEventCopyWithImpl<$Res>
-    extends _$TimerEventCopyWithImpl<$Res>
-    implements _$$_GoBackTimerEventCopyWith<$Res> {
-  __$$_GoBackTimerEventCopyWithImpl(
-      _$_GoBackTimerEvent _value, $Res Function(_$_GoBackTimerEvent) _then)
-      : super(_value, (v) => _then(v as _$_GoBackTimerEvent));
-
-  @override
-  _$_GoBackTimerEvent get _value => super._value as _$_GoBackTimerEvent;
+class __$$GoBackTimerEventImplCopyWithImpl<$Res>
+    extends _$TimerEventCopyWithImpl<$Res, _$GoBackTimerEventImpl>
+    implements _$$GoBackTimerEventImplCopyWith<$Res> {
+  __$$GoBackTimerEventImplCopyWithImpl(_$GoBackTimerEventImpl _value,
+      $Res Function(_$GoBackTimerEventImpl) _then)
+      : super(_value, _then);
 }
 
 /// @nodoc
 
-class _$_GoBackTimerEvent implements _GoBackTimerEvent {
-  const _$_GoBackTimerEvent();
+class _$GoBackTimerEventImpl implements _GoBackTimerEvent {
+  const _$GoBackTimerEventImpl();
 
   @override
   String toString() {
@@ -209,7 +205,7 @@ class _$_GoBackTimerEvent implements _GoBackTimerEvent {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType && other is _$_GoBackTimerEvent);
+        (other.runtimeType == runtimeType && other is _$GoBackTimerEventImpl);
   }
 
   @override
@@ -227,8 +223,8 @@ class _$_GoBackTimerEvent implements _GoBackTimerEvent {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function()? tick,
-    TResult Function()? goBack,
+    TResult? Function()? tick,
+    TResult? Function()? goBack,
   }) {
     return goBack?.call();
   }
@@ -258,8 +254,8 @@ class _$_GoBackTimerEvent implements _GoBackTimerEvent {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_TickTimerEvent value)? tick,
-    TResult Function(_GoBackTimerEvent value)? goBack,
+    TResult? Function(_TickTimerEvent value)? tick,
+    TResult? Function(_GoBackTimerEvent value)? goBack,
   }) {
     return goBack?.call(this);
   }
@@ -279,7 +275,7 @@ class _$_GoBackTimerEvent implements _GoBackTimerEvent {
 }
 
 abstract class _GoBackTimerEvent implements TimerEvent {
-  const factory _GoBackTimerEvent() = _$_GoBackTimerEvent;
+  const factory _GoBackTimerEvent() = _$GoBackTimerEventImpl;
 }
 
 /// @nodoc
@@ -293,8 +289,8 @@ mixin _$TimerState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(int duration)? inProgress,
-    TResult Function(int duration)? complete,
+    TResult? Function(int duration)? inProgress,
+    TResult? Function(int duration)? complete,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -312,8 +308,8 @@ mixin _$TimerState {
       throw _privateConstructorUsedError;
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_InProgressTimerState value)? inProgress,
-    TResult Function(_CompleteTimerState value)? complete,
+    TResult? Function(_InProgressTimerState value)? inProgress,
+    TResult? Function(_CompleteTimerState value)? complete,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -333,58 +329,61 @@ mixin _$TimerState {
 abstract class $TimerStateCopyWith<$Res> {
   factory $TimerStateCopyWith(
           TimerState value, $Res Function(TimerState) then) =
-      _$TimerStateCopyWithImpl<$Res>;
+      _$TimerStateCopyWithImpl<$Res, TimerState>;
+  @useResult
   $Res call({int duration});
 }
 
 /// @nodoc
-class _$TimerStateCopyWithImpl<$Res> implements $TimerStateCopyWith<$Res> {
+class _$TimerStateCopyWithImpl<$Res, $Val extends TimerState>
+    implements $TimerStateCopyWith<$Res> {
   _$TimerStateCopyWithImpl(this._value, this._then);
 
-  final TimerState _value;
   // ignore: unused_field
-  final $Res Function(TimerState) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? duration = freezed,
+    Object? duration = null,
   }) {
     return _then(_value.copyWith(
-      duration: duration == freezed
+      duration: null == duration
           ? _value.duration
           : duration // ignore: cast_nullable_to_non_nullable
               as int,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$$_InProgressTimerStateCopyWith<$Res>
+abstract class _$$InProgressTimerStateImplCopyWith<$Res>
     implements $TimerStateCopyWith<$Res> {
-  factory _$$_InProgressTimerStateCopyWith(_$_InProgressTimerState value,
-          $Res Function(_$_InProgressTimerState) then) =
-      __$$_InProgressTimerStateCopyWithImpl<$Res>;
+  factory _$$InProgressTimerStateImplCopyWith(_$InProgressTimerStateImpl value,
+          $Res Function(_$InProgressTimerStateImpl) then) =
+      __$$InProgressTimerStateImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({int duration});
 }
 
 /// @nodoc
-class __$$_InProgressTimerStateCopyWithImpl<$Res>
-    extends _$TimerStateCopyWithImpl<$Res>
-    implements _$$_InProgressTimerStateCopyWith<$Res> {
-  __$$_InProgressTimerStateCopyWithImpl(_$_InProgressTimerState _value,
-      $Res Function(_$_InProgressTimerState) _then)
-      : super(_value, (v) => _then(v as _$_InProgressTimerState));
+class __$$InProgressTimerStateImplCopyWithImpl<$Res>
+    extends _$TimerStateCopyWithImpl<$Res, _$InProgressTimerStateImpl>
+    implements _$$InProgressTimerStateImplCopyWith<$Res> {
+  __$$InProgressTimerStateImplCopyWithImpl(_$InProgressTimerStateImpl _value,
+      $Res Function(_$InProgressTimerStateImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _$_InProgressTimerState get _value => super._value as _$_InProgressTimerState;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? duration = freezed,
+    Object? duration = null,
   }) {
-    return _then(_$_InProgressTimerState(
-      duration: duration == freezed
+    return _then(_$InProgressTimerStateImpl(
+      duration: null == duration
           ? _value.duration
           : duration // ignore: cast_nullable_to_non_nullable
               as int,
@@ -394,8 +393,8 @@ class __$$_InProgressTimerStateCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_InProgressTimerState implements _InProgressTimerState {
-  const _$_InProgressTimerState({required this.duration});
+class _$InProgressTimerStateImpl implements _InProgressTimerState {
+  const _$InProgressTimerStateImpl({required this.duration});
 
   @override
   final int duration;
@@ -409,19 +408,21 @@ class _$_InProgressTimerState implements _InProgressTimerState {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_InProgressTimerState &&
-            const DeepCollectionEquality().equals(other.duration, duration));
+            other is _$InProgressTimerStateImpl &&
+            (identical(other.duration, duration) ||
+                other.duration == duration));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(duration));
+  int get hashCode => Object.hash(runtimeType, duration);
 
   @JsonKey(ignore: true)
   @override
-  _$$_InProgressTimerStateCopyWith<_$_InProgressTimerState> get copyWith =>
-      __$$_InProgressTimerStateCopyWithImpl<_$_InProgressTimerState>(
-          this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$InProgressTimerStateImplCopyWith<_$InProgressTimerStateImpl>
+      get copyWith =>
+          __$$InProgressTimerStateImplCopyWithImpl<_$InProgressTimerStateImpl>(
+              this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -435,8 +436,8 @@ class _$_InProgressTimerState implements _InProgressTimerState {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(int duration)? inProgress,
-    TResult Function(int duration)? complete,
+    TResult? Function(int duration)? inProgress,
+    TResult? Function(int duration)? complete,
   }) {
     return inProgress?.call(duration);
   }
@@ -466,8 +467,8 @@ class _$_InProgressTimerState implements _InProgressTimerState {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_InProgressTimerState value)? inProgress,
-    TResult Function(_CompleteTimerState value)? complete,
+    TResult? Function(_InProgressTimerState value)? inProgress,
+    TResult? Function(_CompleteTimerState value)? complete,
   }) {
     return inProgress?.call(this);
   }
@@ -488,43 +489,42 @@ class _$_InProgressTimerState implements _InProgressTimerState {
 
 abstract class _InProgressTimerState implements TimerState {
   const factory _InProgressTimerState({required final int duration}) =
-      _$_InProgressTimerState;
+      _$InProgressTimerStateImpl;
 
   @override
-  int get duration => throw _privateConstructorUsedError;
+  int get duration;
   @override
   @JsonKey(ignore: true)
-  _$$_InProgressTimerStateCopyWith<_$_InProgressTimerState> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$InProgressTimerStateImplCopyWith<_$InProgressTimerStateImpl>
+      get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$_CompleteTimerStateCopyWith<$Res>
+abstract class _$$CompleteTimerStateImplCopyWith<$Res>
     implements $TimerStateCopyWith<$Res> {
-  factory _$$_CompleteTimerStateCopyWith(_$_CompleteTimerState value,
-          $Res Function(_$_CompleteTimerState) then) =
-      __$$_CompleteTimerStateCopyWithImpl<$Res>;
+  factory _$$CompleteTimerStateImplCopyWith(_$CompleteTimerStateImpl value,
+          $Res Function(_$CompleteTimerStateImpl) then) =
+      __$$CompleteTimerStateImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({int duration});
 }
 
 /// @nodoc
-class __$$_CompleteTimerStateCopyWithImpl<$Res>
-    extends _$TimerStateCopyWithImpl<$Res>
-    implements _$$_CompleteTimerStateCopyWith<$Res> {
-  __$$_CompleteTimerStateCopyWithImpl(
-      _$_CompleteTimerState _value, $Res Function(_$_CompleteTimerState) _then)
-      : super(_value, (v) => _then(v as _$_CompleteTimerState));
+class __$$CompleteTimerStateImplCopyWithImpl<$Res>
+    extends _$TimerStateCopyWithImpl<$Res, _$CompleteTimerStateImpl>
+    implements _$$CompleteTimerStateImplCopyWith<$Res> {
+  __$$CompleteTimerStateImplCopyWithImpl(_$CompleteTimerStateImpl _value,
+      $Res Function(_$CompleteTimerStateImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _$_CompleteTimerState get _value => super._value as _$_CompleteTimerState;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? duration = freezed,
+    Object? duration = null,
   }) {
-    return _then(_$_CompleteTimerState(
-      duration: duration == freezed
+    return _then(_$CompleteTimerStateImpl(
+      duration: null == duration
           ? _value.duration
           : duration // ignore: cast_nullable_to_non_nullable
               as int,
@@ -534,8 +534,8 @@ class __$$_CompleteTimerStateCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_CompleteTimerState implements _CompleteTimerState {
-  const _$_CompleteTimerState({this.duration = 0});
+class _$CompleteTimerStateImpl implements _CompleteTimerState {
+  const _$CompleteTimerStateImpl({this.duration = 0});
 
   @override
   @JsonKey()
@@ -550,18 +550,19 @@ class _$_CompleteTimerState implements _CompleteTimerState {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_CompleteTimerState &&
-            const DeepCollectionEquality().equals(other.duration, duration));
+            other is _$CompleteTimerStateImpl &&
+            (identical(other.duration, duration) ||
+                other.duration == duration));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(duration));
+  int get hashCode => Object.hash(runtimeType, duration);
 
   @JsonKey(ignore: true)
   @override
-  _$$_CompleteTimerStateCopyWith<_$_CompleteTimerState> get copyWith =>
-      __$$_CompleteTimerStateCopyWithImpl<_$_CompleteTimerState>(
+  @pragma('vm:prefer-inline')
+  _$$CompleteTimerStateImplCopyWith<_$CompleteTimerStateImpl> get copyWith =>
+      __$$CompleteTimerStateImplCopyWithImpl<_$CompleteTimerStateImpl>(
           this, _$identity);
 
   @override
@@ -576,8 +577,8 @@ class _$_CompleteTimerState implements _CompleteTimerState {
   @override
   @optionalTypeArgs
   TResult? whenOrNull<TResult extends Object?>({
-    TResult Function(int duration)? inProgress,
-    TResult Function(int duration)? complete,
+    TResult? Function(int duration)? inProgress,
+    TResult? Function(int duration)? complete,
   }) {
     return complete?.call(duration);
   }
@@ -607,8 +608,8 @@ class _$_CompleteTimerState implements _CompleteTimerState {
   @override
   @optionalTypeArgs
   TResult? mapOrNull<TResult extends Object?>({
-    TResult Function(_InProgressTimerState value)? inProgress,
-    TResult Function(_CompleteTimerState value)? complete,
+    TResult? Function(_InProgressTimerState value)? inProgress,
+    TResult? Function(_CompleteTimerState value)? complete,
   }) {
     return complete?.call(this);
   }
@@ -629,12 +630,12 @@ class _$_CompleteTimerState implements _CompleteTimerState {
 
 abstract class _CompleteTimerState implements TimerState {
   const factory _CompleteTimerState({final int duration}) =
-      _$_CompleteTimerState;
+      _$CompleteTimerStateImpl;
 
   @override
-  int get duration => throw _privateConstructorUsedError;
+  int get duration;
   @override
   @JsonKey(ignore: true)
-  _$$_CompleteTimerStateCopyWith<_$_CompleteTimerState> get copyWith =>
+  _$$CompleteTimerStateImplCopyWith<_$CompleteTimerStateImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

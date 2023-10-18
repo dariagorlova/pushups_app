@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'current_day.dart';
 
@@ -28,67 +28,71 @@ mixin _$CurrentDay {
 abstract class $CurrentDayCopyWith<$Res> {
   factory $CurrentDayCopyWith(
           CurrentDay value, $Res Function(CurrentDay) then) =
-      _$CurrentDayCopyWithImpl<$Res>;
+      _$CurrentDayCopyWithImpl<$Res, CurrentDay>;
+  @useResult
   $Res call({int dayNumber, int typeTraining});
 }
 
 /// @nodoc
-class _$CurrentDayCopyWithImpl<$Res> implements $CurrentDayCopyWith<$Res> {
+class _$CurrentDayCopyWithImpl<$Res, $Val extends CurrentDay>
+    implements $CurrentDayCopyWith<$Res> {
   _$CurrentDayCopyWithImpl(this._value, this._then);
 
-  final CurrentDay _value;
   // ignore: unused_field
-  final $Res Function(CurrentDay) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? dayNumber = freezed,
-    Object? typeTraining = freezed,
+    Object? dayNumber = null,
+    Object? typeTraining = null,
   }) {
     return _then(_value.copyWith(
-      dayNumber: dayNumber == freezed
+      dayNumber: null == dayNumber
           ? _value.dayNumber
           : dayNumber // ignore: cast_nullable_to_non_nullable
               as int,
-      typeTraining: typeTraining == freezed
+      typeTraining: null == typeTraining
           ? _value.typeTraining
           : typeTraining // ignore: cast_nullable_to_non_nullable
               as int,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$$_CurrentDayCopyWith<$Res>
+abstract class _$$CurrentDayImplCopyWith<$Res>
     implements $CurrentDayCopyWith<$Res> {
-  factory _$$_CurrentDayCopyWith(
-          _$_CurrentDay value, $Res Function(_$_CurrentDay) then) =
-      __$$_CurrentDayCopyWithImpl<$Res>;
+  factory _$$CurrentDayImplCopyWith(
+          _$CurrentDayImpl value, $Res Function(_$CurrentDayImpl) then) =
+      __$$CurrentDayImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({int dayNumber, int typeTraining});
 }
 
 /// @nodoc
-class __$$_CurrentDayCopyWithImpl<$Res> extends _$CurrentDayCopyWithImpl<$Res>
-    implements _$$_CurrentDayCopyWith<$Res> {
-  __$$_CurrentDayCopyWithImpl(
-      _$_CurrentDay _value, $Res Function(_$_CurrentDay) _then)
-      : super(_value, (v) => _then(v as _$_CurrentDay));
+class __$$CurrentDayImplCopyWithImpl<$Res>
+    extends _$CurrentDayCopyWithImpl<$Res, _$CurrentDayImpl>
+    implements _$$CurrentDayImplCopyWith<$Res> {
+  __$$CurrentDayImplCopyWithImpl(
+      _$CurrentDayImpl _value, $Res Function(_$CurrentDayImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _$_CurrentDay get _value => super._value as _$_CurrentDay;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? dayNumber = freezed,
-    Object? typeTraining = freezed,
+    Object? dayNumber = null,
+    Object? typeTraining = null,
   }) {
-    return _then(_$_CurrentDay(
-      dayNumber: dayNumber == freezed
+    return _then(_$CurrentDayImpl(
+      dayNumber: null == dayNumber
           ? _value.dayNumber
           : dayNumber // ignore: cast_nullable_to_non_nullable
               as int,
-      typeTraining: typeTraining == freezed
+      typeTraining: null == typeTraining
           ? _value.typeTraining
           : typeTraining // ignore: cast_nullable_to_non_nullable
               as int,
@@ -98,8 +102,8 @@ class __$$_CurrentDayCopyWithImpl<$Res> extends _$CurrentDayCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_CurrentDay implements _CurrentDay {
-  const _$_CurrentDay({required this.dayNumber, required this.typeTraining});
+class _$CurrentDayImpl implements _CurrentDay {
+  const _$CurrentDayImpl({required this.dayNumber, required this.typeTraining});
 
   @override
   final int dayNumber;
@@ -115,35 +119,34 @@ class _$_CurrentDay implements _CurrentDay {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_CurrentDay &&
-            const DeepCollectionEquality().equals(other.dayNumber, dayNumber) &&
-            const DeepCollectionEquality()
-                .equals(other.typeTraining, typeTraining));
+            other is _$CurrentDayImpl &&
+            (identical(other.dayNumber, dayNumber) ||
+                other.dayNumber == dayNumber) &&
+            (identical(other.typeTraining, typeTraining) ||
+                other.typeTraining == typeTraining));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(dayNumber),
-      const DeepCollectionEquality().hash(typeTraining));
+  int get hashCode => Object.hash(runtimeType, dayNumber, typeTraining);
 
   @JsonKey(ignore: true)
   @override
-  _$$_CurrentDayCopyWith<_$_CurrentDay> get copyWith =>
-      __$$_CurrentDayCopyWithImpl<_$_CurrentDay>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$CurrentDayImplCopyWith<_$CurrentDayImpl> get copyWith =>
+      __$$CurrentDayImplCopyWithImpl<_$CurrentDayImpl>(this, _$identity);
 }
 
 abstract class _CurrentDay implements CurrentDay {
   const factory _CurrentDay(
       {required final int dayNumber,
-      required final int typeTraining}) = _$_CurrentDay;
+      required final int typeTraining}) = _$CurrentDayImpl;
 
   @override
-  int get dayNumber => throw _privateConstructorUsedError;
+  int get dayNumber;
   @override
-  int get typeTraining => throw _privateConstructorUsedError;
+  int get typeTraining;
   @override
   @JsonKey(ignore: true)
-  _$$_CurrentDayCopyWith<_$_CurrentDay> get copyWith =>
+  _$$CurrentDayImplCopyWith<_$CurrentDayImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

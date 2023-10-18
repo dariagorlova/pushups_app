@@ -1,7 +1,7 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'one_day_data.dart';
 
@@ -29,77 +29,81 @@ mixin _$OneDayData {
 abstract class $OneDayDataCopyWith<$Res> {
   factory $OneDayDataCopyWith(
           OneDayData value, $Res Function(OneDayData) then) =
-      _$OneDayDataCopyWithImpl<$Res>;
+      _$OneDayDataCopyWithImpl<$Res, OneDayData>;
+  @useResult
   $Res call({int dayNumber, List<int> listPushups, int timeRestInSec});
 }
 
 /// @nodoc
-class _$OneDayDataCopyWithImpl<$Res> implements $OneDayDataCopyWith<$Res> {
+class _$OneDayDataCopyWithImpl<$Res, $Val extends OneDayData>
+    implements $OneDayDataCopyWith<$Res> {
   _$OneDayDataCopyWithImpl(this._value, this._then);
 
-  final OneDayData _value;
   // ignore: unused_field
-  final $Res Function(OneDayData) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? dayNumber = freezed,
-    Object? listPushups = freezed,
-    Object? timeRestInSec = freezed,
+    Object? dayNumber = null,
+    Object? listPushups = null,
+    Object? timeRestInSec = null,
   }) {
     return _then(_value.copyWith(
-      dayNumber: dayNumber == freezed
+      dayNumber: null == dayNumber
           ? _value.dayNumber
           : dayNumber // ignore: cast_nullable_to_non_nullable
               as int,
-      listPushups: listPushups == freezed
+      listPushups: null == listPushups
           ? _value.listPushups
           : listPushups // ignore: cast_nullable_to_non_nullable
               as List<int>,
-      timeRestInSec: timeRestInSec == freezed
+      timeRestInSec: null == timeRestInSec
           ? _value.timeRestInSec
           : timeRestInSec // ignore: cast_nullable_to_non_nullable
               as int,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$$_OneDayDataCopyWith<$Res>
+abstract class _$$OneDayDataImplCopyWith<$Res>
     implements $OneDayDataCopyWith<$Res> {
-  factory _$$_OneDayDataCopyWith(
-          _$_OneDayData value, $Res Function(_$_OneDayData) then) =
-      __$$_OneDayDataCopyWithImpl<$Res>;
+  factory _$$OneDayDataImplCopyWith(
+          _$OneDayDataImpl value, $Res Function(_$OneDayDataImpl) then) =
+      __$$OneDayDataImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({int dayNumber, List<int> listPushups, int timeRestInSec});
 }
 
 /// @nodoc
-class __$$_OneDayDataCopyWithImpl<$Res> extends _$OneDayDataCopyWithImpl<$Res>
-    implements _$$_OneDayDataCopyWith<$Res> {
-  __$$_OneDayDataCopyWithImpl(
-      _$_OneDayData _value, $Res Function(_$_OneDayData) _then)
-      : super(_value, (v) => _then(v as _$_OneDayData));
+class __$$OneDayDataImplCopyWithImpl<$Res>
+    extends _$OneDayDataCopyWithImpl<$Res, _$OneDayDataImpl>
+    implements _$$OneDayDataImplCopyWith<$Res> {
+  __$$OneDayDataImplCopyWithImpl(
+      _$OneDayDataImpl _value, $Res Function(_$OneDayDataImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _$_OneDayData get _value => super._value as _$_OneDayData;
-
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? dayNumber = freezed,
-    Object? listPushups = freezed,
-    Object? timeRestInSec = freezed,
+    Object? dayNumber = null,
+    Object? listPushups = null,
+    Object? timeRestInSec = null,
   }) {
-    return _then(_$_OneDayData(
-      dayNumber: dayNumber == freezed
+    return _then(_$OneDayDataImpl(
+      dayNumber: null == dayNumber
           ? _value.dayNumber
           : dayNumber // ignore: cast_nullable_to_non_nullable
               as int,
-      listPushups: listPushups == freezed
+      listPushups: null == listPushups
           ? _value._listPushups
           : listPushups // ignore: cast_nullable_to_non_nullable
               as List<int>,
-      timeRestInSec: timeRestInSec == freezed
+      timeRestInSec: null == timeRestInSec
           ? _value.timeRestInSec
           : timeRestInSec // ignore: cast_nullable_to_non_nullable
               as int,
@@ -109,8 +113,8 @@ class __$$_OneDayDataCopyWithImpl<$Res> extends _$OneDayDataCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_OneDayData implements _OneDayData {
-  const _$_OneDayData(
+class _$OneDayDataImpl implements _OneDayData {
+  const _$OneDayDataImpl(
       {required this.dayNumber,
       required final List<int> listPushups,
       required this.timeRestInSec})
@@ -121,6 +125,7 @@ class _$_OneDayData implements _OneDayData {
   final List<int> _listPushups;
   @override
   List<int> get listPushups {
+    if (_listPushups is EqualUnmodifiableListView) return _listPushups;
     // ignore: implicit_dynamic_type
     return EqualUnmodifiableListView(_listPushups);
   }
@@ -137,41 +142,40 @@ class _$_OneDayData implements _OneDayData {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_OneDayData &&
-            const DeepCollectionEquality().equals(other.dayNumber, dayNumber) &&
+            other is _$OneDayDataImpl &&
+            (identical(other.dayNumber, dayNumber) ||
+                other.dayNumber == dayNumber) &&
             const DeepCollectionEquality()
                 .equals(other._listPushups, _listPushups) &&
-            const DeepCollectionEquality()
-                .equals(other.timeRestInSec, timeRestInSec));
+            (identical(other.timeRestInSec, timeRestInSec) ||
+                other.timeRestInSec == timeRestInSec));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(dayNumber),
-      const DeepCollectionEquality().hash(_listPushups),
-      const DeepCollectionEquality().hash(timeRestInSec));
+  int get hashCode => Object.hash(runtimeType, dayNumber,
+      const DeepCollectionEquality().hash(_listPushups), timeRestInSec);
 
   @JsonKey(ignore: true)
   @override
-  _$$_OneDayDataCopyWith<_$_OneDayData> get copyWith =>
-      __$$_OneDayDataCopyWithImpl<_$_OneDayData>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$OneDayDataImplCopyWith<_$OneDayDataImpl> get copyWith =>
+      __$$OneDayDataImplCopyWithImpl<_$OneDayDataImpl>(this, _$identity);
 }
 
 abstract class _OneDayData implements OneDayData {
   const factory _OneDayData(
       {required final int dayNumber,
       required final List<int> listPushups,
-      required final int timeRestInSec}) = _$_OneDayData;
+      required final int timeRestInSec}) = _$OneDayDataImpl;
 
   @override
-  int get dayNumber => throw _privateConstructorUsedError;
+  int get dayNumber;
   @override
-  List<int> get listPushups => throw _privateConstructorUsedError;
+  List<int> get listPushups;
   @override
-  int get timeRestInSec => throw _privateConstructorUsedError;
+  int get timeRestInSec;
   @override
   @JsonKey(ignore: true)
-  _$$_OneDayDataCopyWith<_$_OneDayData> get copyWith =>
+  _$$OneDayDataImplCopyWith<_$OneDayDataImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

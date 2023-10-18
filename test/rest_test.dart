@@ -12,15 +12,15 @@ import './step/i_see_text.dart';
 import './step/second_elapsed.dart';
 
 void main() {
-  Future<void> bddSetUp(WidgetTester tester) async {
-    await theAppIsRunning(tester);
-    await imOnTrainingProgram(tester, 0);
-    await iTapText(tester, 'Week 1, Day 1');
-    await iTapText(tester, '2');
-    await iTapText(tester, '1');
-    await iWait(tester);
-  }
   group('''Rest page''', () {
+    Future<void> bddSetUp(WidgetTester tester) async {
+      await theAppIsRunning(tester);
+      await imOnTrainingProgram(tester, 0);
+      await iTapText(tester, 'Week 1, Day 1');
+      await iTapText(tester, '2');
+      await iTapText(tester, '1');
+      await iWait(tester);
+    }
     testWidgets('''The user finished first training and need to rest''', (tester) async {
       await bddSetUp(tester);
       await iSeeText(tester, 'Time to rest!');
