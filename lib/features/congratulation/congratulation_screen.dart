@@ -2,7 +2,7 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:pushups_app/localization/localization.dart';
 
-@RoutePage()
+@RoutePage<bool>()
 class CongratulationScreen extends StatelessWidget {
   const CongratulationScreen({
     super.key,

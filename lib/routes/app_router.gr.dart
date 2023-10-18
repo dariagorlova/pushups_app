@@ -16,7 +16,7 @@ abstract class _$AppRouter extends RootStackRouter {
   @override
   final Map<String, PageFactory> pagesMap = {
     CongratulationRoute.name: (routeData) {
-      return AutoRoutePage<dynamic>(
+      return AutoRoutePage<bool>(
         routeData: routeData,
         child: const CongratulationScreen(),
       );
@@ -39,7 +39,7 @@ abstract class _$AppRouter extends RootStackRouter {
     },
     TrainingRoute.name: (routeData) {
       final args = routeData.argsAs<TrainingRouteArgs>();
-      return AutoRoutePage<dynamic>(
+      return AutoRoutePage<bool>(
         routeData: routeData,
         child: TrainingScreen(
           day: args.day,

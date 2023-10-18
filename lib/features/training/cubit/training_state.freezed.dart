@@ -16,11 +16,11 @@ final _privateConstructorUsedError = UnsupportedError(
 
 /// @nodoc
 mixin _$TrainingState {
+  List<int> get listPushups => throw _privateConstructorUsedError;
+  int get timeRestInSec => throw _privateConstructorUsedError;
   int get curPushup => throw _privateConstructorUsedError;
   int get curStep => throw _privateConstructorUsedError;
   bool get isCancelled => throw _privateConstructorUsedError;
-  List<int> get listPushups => throw _privateConstructorUsedError;
-  int get timeRestInSec => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $TrainingStateCopyWith<TrainingState> get copyWith =>
@@ -34,11 +34,11 @@ abstract class $TrainingStateCopyWith<$Res> {
       _$TrainingStateCopyWithImpl<$Res, TrainingState>;
   @useResult
   $Res call(
-      {int curPushup,
+      {List<int> listPushups,
+      int timeRestInSec,
+      int curPushup,
       int curStep,
-      bool isCancelled,
-      List<int> listPushups,
-      int timeRestInSec});
+      bool isCancelled});
 }
 
 /// @nodoc
@@ -54,13 +54,21 @@ class _$TrainingStateCopyWithImpl<$Res, $Val extends TrainingState>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? listPushups = null,
+    Object? timeRestInSec = null,
     Object? curPushup = null,
     Object? curStep = null,
     Object? isCancelled = null,
-    Object? listPushups = null,
-    Object? timeRestInSec = null,
   }) {
     return _then(_value.copyWith(
+      listPushups: null == listPushups
+          ? _value.listPushups
+          : listPushups // ignore: cast_nullable_to_non_nullable
+              as List<int>,
+      timeRestInSec: null == timeRestInSec
+          ? _value.timeRestInSec
+          : timeRestInSec // ignore: cast_nullable_to_non_nullable
+              as int,
       curPushup: null == curPushup
           ? _value.curPushup
           : curPushup // ignore: cast_nullable_to_non_nullable
@@ -73,14 +81,6 @@ class _$TrainingStateCopyWithImpl<$Res, $Val extends TrainingState>
           ? _value.isCancelled
           : isCancelled // ignore: cast_nullable_to_non_nullable
               as bool,
-      listPushups: null == listPushups
-          ? _value.listPushups
-          : listPushups // ignore: cast_nullable_to_non_nullable
-              as List<int>,
-      timeRestInSec: null == timeRestInSec
-          ? _value.timeRestInSec
-          : timeRestInSec // ignore: cast_nullable_to_non_nullable
-              as int,
     ) as $Val);
   }
 }
@@ -94,11 +94,11 @@ abstract class _$$TrainingStateImplCopyWith<$Res>
   @override
   @useResult
   $Res call(
-      {int curPushup,
+      {List<int> listPushups,
+      int timeRestInSec,
+      int curPushup,
       int curStep,
-      bool isCancelled,
-      List<int> listPushups,
-      int timeRestInSec});
+      bool isCancelled});
 }
 
 /// @nodoc
@@ -112,13 +112,21 @@ class __$$TrainingStateImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
+    Object? listPushups = null,
+    Object? timeRestInSec = null,
     Object? curPushup = null,
     Object? curStep = null,
     Object? isCancelled = null,
-    Object? listPushups = null,
-    Object? timeRestInSec = null,
   }) {
     return _then(_$TrainingStateImpl(
+      listPushups: null == listPushups
+          ? _value._listPushups
+          : listPushups // ignore: cast_nullable_to_non_nullable
+              as List<int>,
+      timeRestInSec: null == timeRestInSec
+          ? _value.timeRestInSec
+          : timeRestInSec // ignore: cast_nullable_to_non_nullable
+              as int,
       curPushup: null == curPushup
           ? _value.curPushup
           : curPushup // ignore: cast_nullable_to_non_nullable
@@ -131,14 +139,6 @@ class __$$TrainingStateImplCopyWithImpl<$Res>
           ? _value.isCancelled
           : isCancelled // ignore: cast_nullable_to_non_nullable
               as bool,
-      listPushups: null == listPushups
-          ? _value._listPushups
-          : listPushups // ignore: cast_nullable_to_non_nullable
-              as List<int>,
-      timeRestInSec: null == timeRestInSec
-          ? _value.timeRestInSec
-          : timeRestInSec // ignore: cast_nullable_to_non_nullable
-              as int,
     ));
   }
 }
@@ -147,22 +147,13 @@ class __$$TrainingStateImplCopyWithImpl<$Res>
 
 class _$TrainingStateImpl implements _TrainingState {
   const _$TrainingStateImpl(
-      {this.curPushup = 0,
+      {required final List<int> listPushups,
+      required this.timeRestInSec,
+      this.curPushup = 0,
       this.curStep = 0,
-      this.isCancelled = false,
-      required final List<int> listPushups,
-      required this.timeRestInSec})
+      this.isCancelled = false})
       : _listPushups = listPushups;
 
-  @override
-  @JsonKey()
-  final int curPushup;
-  @override
-  @JsonKey()
-  final int curStep;
-  @override
-  @JsonKey()
-  final bool isCancelled;
   final List<int> _listPushups;
   @override
   List<int> get listPushups {
@@ -173,10 +164,19 @@ class _$TrainingStateImpl implements _TrainingState {
 
   @override
   final int timeRestInSec;
+  @override
+  @JsonKey()
+  final int curPushup;
+  @override
+  @JsonKey()
+  final int curStep;
+  @override
+  @JsonKey()
+  final bool isCancelled;
 
   @override
   String toString() {
-    return 'TrainingState(curPushup: $curPushup, curStep: $curStep, isCancelled: $isCancelled, listPushups: $listPushups, timeRestInSec: $timeRestInSec)';
+    return 'TrainingState(listPushups: $listPushups, timeRestInSec: $timeRestInSec, curPushup: $curPushup, curStep: $curStep, isCancelled: $isCancelled)';
   }
 
   @override
@@ -184,20 +184,25 @@ class _$TrainingStateImpl implements _TrainingState {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$TrainingStateImpl &&
+            const DeepCollectionEquality()
+                .equals(other._listPushups, _listPushups) &&
+            (identical(other.timeRestInSec, timeRestInSec) ||
+                other.timeRestInSec == timeRestInSec) &&
             (identical(other.curPushup, curPushup) ||
                 other.curPushup == curPushup) &&
             (identical(other.curStep, curStep) || other.curStep == curStep) &&
             (identical(other.isCancelled, isCancelled) ||
-                other.isCancelled == isCancelled) &&
-            const DeepCollectionEquality()
-                .equals(other._listPushups, _listPushups) &&
-            (identical(other.timeRestInSec, timeRestInSec) ||
-                other.timeRestInSec == timeRestInSec));
+                other.isCancelled == isCancelled));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, curPushup, curStep, isCancelled,
-      const DeepCollectionEquality().hash(_listPushups), timeRestInSec);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(_listPushups),
+      timeRestInSec,
+      curPushup,
+      curStep,
+      isCancelled);
 
   @JsonKey(ignore: true)
   @override
@@ -208,22 +213,22 @@ class _$TrainingStateImpl implements _TrainingState {
 
 abstract class _TrainingState implements TrainingState {
   const factory _TrainingState(
-      {final int curPushup,
+      {required final List<int> listPushups,
+      required final int timeRestInSec,
+      final int curPushup,
       final int curStep,
-      final bool isCancelled,
-      required final List<int> listPushups,
-      required final int timeRestInSec}) = _$TrainingStateImpl;
+      final bool isCancelled}) = _$TrainingStateImpl;
 
+  @override
+  List<int> get listPushups;
+  @override
+  int get timeRestInSec;
   @override
   int get curPushup;
   @override
   int get curStep;
   @override
   bool get isCancelled;
-  @override
-  List<int> get listPushups;
-  @override
-  int get timeRestInSec;
   @override
   @JsonKey(ignore: true)
   _$$TrainingStateImplCopyWith<_$TrainingStateImpl> get copyWith =>

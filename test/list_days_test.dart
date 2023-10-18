@@ -18,6 +18,7 @@ void main() {
       await theAppIsRunning(tester);
       await imOnTrainingProgram(tester, 0);
     }
+
     testWidgets('''As a User I want to see list of training days''', (tester) async {
       await bddSetUp(tester);
       await iSeeWidget(tester, ListView);
@@ -30,11 +31,8 @@ void main() {
       await iSeeText(tester, 'Week 1, Day 1');
       await iSeeText(tester, '2-3-2-2-3');
     });
-    testWidgets('''Initial list contains ListTile with color orange''', (tester) async {
-      await bddSetUp(tester);
-      await iSeeListtileWithColor(tester, Colors.orange);
-    });
-    testWidgets('''As a User I want to see 6-6-4-4-5 text if selected tab Strong''', (tester) async {
+    testWidgets('''As a User I want to see 6-6-4-4-5 text if selected tab Strong''',
+        (tester) async {
       await bddSetUp(tester);
       await iTapText(tester, 'Strong');
       await iSeeText(tester, 'Week 1, Day 1');

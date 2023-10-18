@@ -6,7 +6,7 @@ import 'package:pushups_app/features/training/cubit/training_cubit.dart';
 import 'package:pushups_app/features/training/cubit/training_state.dart';
 import 'package:pushups_app/localization/localization.dart';
 
-@RoutePage()
+@RoutePage<bool>()
 class TrainingScreen extends StatelessWidget {
   const TrainingScreen({
     required this.day,
