@@ -1,10 +1,9 @@
 import 'dart:async';
-import 'package:bloc/bloc.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';
 import 'package:pushups_app/features/core/service/pushups_navigator.dart';
 import 'package:pushups_app/features/rest/util/ticker.dart';
-//import 'package:pushups_app/routes/app_router.dart';
 
 part 'timer_event.dart';
 part 'timer_state.dart';
@@ -21,13 +20,10 @@ class TimerBloc extends Bloc<TimerEvent, TimerState> {
     on<_TickTimerEvent>(_onTicked);
     on<_GoBackTimerEvent>(_onGoBack);
 
-    _tickerSubscription = _ticker
-        .tick(ticks: duration)
-        .listen((duration) => add(const TimerEvent.tick()));
+    _tickerSubscription = _ticker.tick(ticks: duration).listen((duration) => add(const TimerEvent.tick()));
   }
 
   final Ticker _ticker;
-  //final AppRouter _router;
   final PushupsNavigator _router;
   late final StreamSubscription<int>? _tickerSubscription;
 
@@ -51,9 +47,7 @@ class TimerBloc extends Bloc<TimerEvent, TimerState> {
   void _onTicked(_TickTimerEvent event, Emitter<TimerState> emit) {
     state.mapOrNull(
       inProgress: (state) => emit(
-        state.duration == 1
-            ? const TimerState.complete()
-            : state.copyWith(duration: state.duration - 1),
+        state.duration == 1 ? const TimerState.complete() : state.copyWith(duration: state.duration - 1),
       ),
     );
   }

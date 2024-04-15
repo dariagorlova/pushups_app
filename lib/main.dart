@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:get_it/get_it.dart';
-import 'package:injectable/injectable.dart';
 import 'package:pushups_app/di/injection.dart';
 import 'package:pushups_app/features/splash/splash_screen.dart';
 import 'package:pushups_app/localization/localization.dart';
@@ -18,7 +16,7 @@ class MyApp extends StatefulWidget {
     this.locale,
   });
 
-  final Future<GetIt>? initialization;
+  final Future<void>? initialization;
   final Locale? locale;
 
   @override
@@ -26,16 +24,13 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  late final Future<GetIt> _initialization;
+  late final Future<void> _initialization;
 
   @override
   void initState() {
     super.initState();
     getIt.pushNewScope();
-    _initialization = widget.initialization ??
-        configureDependencies(
-          env: Environment.prod,
-        );
+    _initialization = widget.initialization ?? initDI();
   }
 
   @override
@@ -61,8 +56,21 @@ class _MyAppState extends State<MyApp> {
                 unselectedLabelColor: Colors.black,
                 labelStyle: Theme.of(context).textTheme.titleLarge,
               ),
-              colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.orange)
-                  .copyWith(background: Colors.orangeAccent.shade100),
+              colorScheme: ColorScheme.fromSwatch(primarySwatch: Colors.orange).copyWith(background: Colors.orangeAccent.shade100),
+              appBarTheme: const AppBarTheme(
+                color: Colors.orange,
+              ),
+              elevatedButtonTheme: ElevatedButtonThemeData(
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: Colors.orange,
+                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(8)),
+                  textStyle: const TextStyle(
+                    color: Colors.black,
+                    fontSize: 20,
+                    wordSpacing: 2,
+                  ),
+                ),
+              ),
             ),
             routeInformationParser: getIt<AppRouter>().defaultRouteParser(),
             routerDelegate: getIt<AppRouter>().delegate(),

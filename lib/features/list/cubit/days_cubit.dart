@@ -1,5 +1,5 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:injectable/injectable.dart';
+
 import 'package:pushups_app/features/core/model/current_day.dart';
 import 'package:pushups_app/features/core/model/one_day_data.dart';
 import 'package:pushups_app/features/core/service/current_day_repository.dart';
@@ -10,7 +10,6 @@ import 'package:pushups_app/features/list/model/day_view_model.dart';
 
 //import 'package:pushups_app/routes/app_router.dart';
 
-@injectable
 class DaysCubit extends Cubit<DaysState> {
   DaysCubit(
     this._router,
@@ -60,13 +59,6 @@ class DaysCubit extends Cubit<DaysState> {
     final allDays = state.mapOrNull(loaded: (state) => state.allDays);
     if (allDays != null && allDays.length > curIndex) {
       final day = allDays[curIndex];
-      // final result = await _router.push<bool>(
-      //   TrainingRoute(
-      //     day: day.day,
-      //     listPushups: day.listPushups,
-      //     timeRestInSec: day.timeRest,
-      //   ),
-      // );
       final result = await _router.openTrainingScreen(
         day.day,
         day.listPushups,
@@ -92,8 +84,7 @@ class DaysCubit extends Cubit<DaysState> {
     return allDayData
         .map(
           (d) => DayViewModel(
-            isCurrent: d.dayNumber == currentDay.dayNumber &&
-                currentDay.typeTraining == newTrainingProgramType,
+            isCurrent: d.dayNumber == currentDay.dayNumber && currentDay.typeTraining == newTrainingProgramType,
             listPushups: d.listPushups,
             day: d.dayNumber,
             timeRest: d.timeRestInSec,

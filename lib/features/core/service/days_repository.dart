@@ -1,7 +1,5 @@
-import 'package:injectable/injectable.dart';
 import 'package:pushups_app/features/core/model/one_day_data.dart';
 
-@lazySingleton
 class DaysRepository {
   final List<OneDayData> _items = [
     const OneDayData(
