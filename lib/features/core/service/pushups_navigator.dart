@@ -1,7 +1,5 @@
-import 'package:injectable/injectable.dart';
 import 'package:pushups_app/routes/app_router.dart';
 
-@injectable
 class PushupsNavigator {
   const PushupsNavigator(this._router);
 

@@ -2,7 +2,9 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:pushups_app/di/injection.dart';
+import 'package:pushups_app/features/core/service/pushups_navigator.dart';
 import 'package:pushups_app/features/rest/bloc/timer_bloc.dart';
+import 'package:pushups_app/features/rest/util/ticker.dart';
 import 'package:pushups_app/localization/localization.dart';
 
 @RoutePage()
@@ -17,7 +19,7 @@ class RestScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (_) => getIt<TimerBloc>(param1: timeRestInSec),
+      create: (_) => TimerBloc(getIt.get<Ticker>(), getIt.get<PushupsNavigator>(), timeRestInSec),
       child: const TimerView(),
     );
   }
@@ -29,6 +31,7 @@ class TimerView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(),
       body: Center(
         child: Column(

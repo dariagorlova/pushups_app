@@ -1,8 +1,6 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:injectable/injectable.dart';
 import 'package:pushups_app/features/core/service/pushups_navigator.dart';
 import 'package:pushups_app/features/training/cubit/training_state.dart';
-//import 'package:pushups_app/routes/app_router.dart';
 
 class TrainingCubitParam {
   const TrainingCubitParam({
@@ -14,10 +12,9 @@ class TrainingCubitParam {
   final int timeRestInSec;
 }
 
-@injectable
 class TrainingCubit extends Cubit<TrainingState> {
   TrainingCubit(
-    @factoryParam TrainingCubitParam param,
+    TrainingCubitParam param,
     this._router,
   ) : super(
           TrainingState(
@@ -27,7 +24,6 @@ class TrainingCubit extends Cubit<TrainingState> {
           ),
         );
 
-  //final AppRouter _router;
   final PushupsNavigator _router;
 
   Future<void> pushup() async {
@@ -35,11 +31,6 @@ class TrainingCubit extends Cubit<TrainingState> {
 
     if (curPushup == 0) {
       if (state.curStep < state.listPushups.length - 1) {
-        // await _router.push(
-        //   RestRoute(
-        //     timeRestInSec: state.timeRestInSec,
-        //   ),
-        // );
         await _router.openRestScreen(state.timeRestInSec);
 
         final newCurStep = state.curStep + 1;
@@ -50,7 +41,6 @@ class TrainingCubit extends Cubit<TrainingState> {
         emit(state.copyWith(curPushup: curPushup));
       } else {
         goBack(result: true);
-        //await _router.push(const CongratulationRoute());
         await _router.openCongratulationScreen();
       }
     } else {
@@ -60,7 +50,6 @@ class TrainingCubit extends Cubit<TrainingState> {
 
   void goBack({required bool result}) {
     emit(state.copyWith(isCancelled: true));
-    //_router.pop(result);
     result ? _router.pop() : _router.popWithResult();
   }
 }

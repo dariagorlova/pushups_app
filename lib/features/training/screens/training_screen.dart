@@ -2,6 +2,7 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:pushups_app/di/injection.dart';
+import 'package:pushups_app/features/core/service/pushups_navigator.dart';
 import 'package:pushups_app/features/training/cubit/training_cubit.dart';
 import 'package:pushups_app/features/training/cubit/training_state.dart';
 import 'package:pushups_app/localization/localization.dart';
@@ -22,11 +23,12 @@ class TrainingScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => getIt<TrainingCubit>(
-        param1: TrainingCubitParam(
+      create: (context) => TrainingCubit(
+        TrainingCubitParam(
           listPushups: listPushups,
           timeRestInSec: timeRestInSec,
         ),
+        getIt.get<PushupsNavigator>(),
       ),
       child: _TrainingView(title: day),
     );
@@ -51,6 +53,7 @@ class _TrainingView extends StatelessWidget {
         return false;
       },
       child: Scaffold(
+        backgroundColor: Colors.white,
         appBar: AppBar(
           title: Text(
             AppLocalizations.of(context).exerciseTitle(title),
@@ -100,14 +103,20 @@ Future<void> showAlertDialog(BuildContext context) {
     content: Text(t.quitBody),
     actions: [
       ElevatedButton(
-        child: Text(t.yesButtonTitle),
+        child: Text(
+          t.yesButtonTitle,
+          style: const TextStyle(color: Colors.black),
+        ),
         onPressed: () {
           Navigator.of(context).pop();
           context.read<TrainingCubit>().goBack(result: false);
         },
       ),
       ElevatedButton(
-        child: Text(t.noButtonTitle),
+        child: Text(
+          t.noButtonTitle,
+          style: const TextStyle(color: Colors.black),
+        ),
         onPressed: () {
           Navigator.of(context).pop();
         },
