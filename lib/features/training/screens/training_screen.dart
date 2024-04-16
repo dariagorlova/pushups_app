@@ -124,5 +124,5 @@ Future<void> showAlertDialog(BuildContext context) {
     ],
   );
 
-  return showDialog<void>(context: context, builder: (context) => dialog);
+  return showDialog<void>(context: context, useRootNavigator: false, builder: (context) => dialog);
 }
