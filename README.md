@@ -1,6 +1,6 @@
 # 100 pushups
 
-![Screenshots](https://raw.githubusercontent.com/dariagorlova/pushups_app/master/doc/images/sample.png#300x200)
+![Screenshots](https://raw.githubusercontent.com/dariagorlova/pushups_app/master/doc/sample.png#300x200)
 
 The program to train your body to go from 1 pushup to 100 consecutive reps in less than two months
 
